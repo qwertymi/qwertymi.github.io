@@ -1,6 +1,19 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+@font-face {
+  font-family: 'LeferiPoint';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'LeferiBase';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +37,11 @@ img {
 
 html {
   font-size: 16px;
+
 }
 
 body {
-  font-family: 'Noto Sans KR', "Malgun Gothic", "맑은 고딕", "돋움", "굴림", sans-serif;
+  font-family: 'LeferiBase', 'Noto Sans KR', "Malgun Gothic", "맑은 고딕", "돋움", "굴림", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -35,6 +49,7 @@ body {
   color: #000;
   font-size: 16px;
   word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 /* 공통요소 */
@@ -58,15 +73,34 @@ body {
   display: block;
 }
 
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #8f8f8f;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.title{
+  padding: 80px 0 20px 0;
+}
+/* header */
 .header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 9999;
   text-align: right;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'LeferiBase';
 }
 
 .gnb {
@@ -95,26 +129,111 @@ body {
   color: cornflowerblue;
 }
 
+/* visual */
 .visual {
   position: relative;
   display: block;
-  height: 800px;
-  background-color: skyblue;
+  height: 100vh;
+  background-color: #d58dff;
 }
 
+.visual .container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: .8fr 1.6fr 1.7fr;
+  grid-template-rows: 47vh 44vh auto;
+  align-items: stretch;
+  grid-template-areas:
+    'img1 pic img2'
+    'img3 pic cate'
+    'line line line';
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.pic {
+  grid-area: pic;
+  justify-self: stretch;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: cate;
+}
+
+.line {
+  grid-area: line;
+}
+
+.grid-content {
+  object-fit: cover;
+  display: block;
+  border: 3px solid #000;
+}
+
+/* porfile */
 .profile {
   position: relative;
   display: block;
-  background-color: gray;
+  padding: 120px;
 }
 
 .profile .inner {
   height: 100%;
 }
 
+.profile h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  top: 70px;
+  left: -100px;
+  transform: rotate(-90deg);
+}
+
+.introduce img {
+  float: left;
+}
+
+.introduce-txt {
+  float: right;
+}
+
+.introduce-txt p {
+  margin-bottom: 50px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.introduce-txt ul {}
+
+.introduce-txt ul li {
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.introduce-txt ul li span {
+  display: inline-block;
+  width: 150px;
+}
+
+
+
+/* portfolio */
 .portfolio {
   position: relative;
   display: block;
+  background-color: #f3f2f3;
+  height: 2000px;
 }
 
 .portfolio h2 {
@@ -127,6 +246,7 @@ body {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .portfolio h4 {
@@ -145,6 +265,260 @@ body {
   position: relative;
 }
 
+
+
+
+
+.about-main {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 665px;
+}
+
+.about-main-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  /* display: none; */
+}
+
+.about-main-box a {
+  display: block;
+  height: 100%;
+}
+
+.about-main-box a i {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 665px;
+  overflow: hidden;
+}
+
+.about-main-box a i img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  filter: brightness(0.7);
+}
+
+.about-main-box a i:hover img {
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1);
+}
+
+.about-main-box a p {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #1a1a1d;
+  margin-top: 2.16rem;
+  font-weight: 500;
+  margin-bottom: 0.72rem;
+}
+
+
+.about-main-box a span {
+  color: #77777e;
+  font-size: 1.6rem;
+}
+
+/* 위치 조절하기  */
+.sw-about-2-control {
+  position: absolute;
+  left: 0;
+  bottom: 13.68rem;
+  display: block;
+  width: 100%;
+  z-index: 9;
+}
+
+/* 가능하면 아래처럼 pg 를 넓혀준다 */
+.sw-about-2-pg {
+  width: 100%;
+}
+
+/* 일반적인 버튼 모양 */
+.sw-about-2-pg .swiper-pagination-bullet {
+  background: #fff;
+  width: 0.432rem;
+  height: 0.432rem;
+  margin: 0 0.72rem;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+/* 포커스가 된 경우 버튼 모양 */
+.sw-about-2-pg .swiper-pagination-bullet-active {
+  /* width: 12px;
+  height: 12px; */
+  transform: scale(2.0);
+  opacity: 1;
+}
+
+/* 애니메이션 시작 모습 */
+.sw-about-2 .swiper-slide>h5 {
+  position: absolute;
+  left: 1.44rem;
+  top: 14.4rem;
+  font-size: 3rem;
+  color: #fff;
+  transition: all 0.5s 0s ease-in-out;
+  opacity: 0;
+  transform: translateY(7.2rem);
+}
+
+.sw-about-2 .swiper-slide>p {
+  position: absolute;
+  left: 1.44rem;
+  top: 19.44rem;
+  width: 90%;
+
+  font-size: 1.4rem;
+  color: #fff;
+  transition: all 0.5s 0.2s ease-in-out;
+  opacity: 0;
+  transform: translateY(7.2rem);
+}
+
+/* 애니메이션 포커스 모습  */
+.sw-about-2 .swiper-slide-active>h5 {
+  /* left: 20px;
+  top: 200px; */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sw-about-2 .swiper-slide-active>p {
+  /* left: 20px;
+  top: 270px; */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about-menu {
+  float: right;
+  width: 45%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.about-menu-list {}
+
+.about-menu-list>li {
+  position: relative;
+  height: 140px;
+  margin-bottom: 35px;
+}
+
+.about-menu-list>li>a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+}
+
+.about-menu-list>li>a i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.about-menu-list>li>a i em {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  opacity: 0;
+  font-size: 5rem;
+}
+
+.about-menu-list>li>a i img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  filter: brightness(0.7);
+  transition: all 0.3s;
+}
+
+.about-menu-list>li>a:hover i img {
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1);
+}
+
+.about-menu-list>li>a p {
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #1a1a1d;
+  font-weight: 500;
+  padding-top: 5px;
+}
+.about-menu-list>li>a p small{
+  font-size: 15px;
+  color: #1a1a1d;
+
+}
+.about-menu-list>li>a p span{
+  vertical-align: text-bottom;
+}
+.pf-link{
+  position: absolute;
+  bottom: 30px;
+  left: 300px;
+}
+
+.pf-link li {
+  display: inline-block;
+  color: #77777e;
+  font-size: 16px;
+  margin-right: 30px;
+}
+
+.pf-link a:hover{
+  color: #f1adff;
+}
+
+
+.about-menu-focus p {
+  color: #86d5d6 !important;
+}
+
+.about-menu-focus p small{
+  color: #aad4d4 !important; 
+}
+
+.about-menu-focus i {
+  background-color: rgba(134, 213, 214, 1) !important;
+}
+
+
+.about-menu-focus i img {
+  opacity: 0.5 !important;
+  /* display: none; */
+}
+
+
+
+
+
+
+
 .portfolio-cate {
   position: relative;
 }
@@ -154,7 +528,7 @@ body {
   overflow: hidden;
 }
 
-.portfolio-list> li {
+.portfolio-list>li {
   position: relative;
   float: left;
   width: 30.3%;
@@ -162,6 +536,72 @@ body {
   overflow: hidden;
   margin: 20px 1.5% 50px 1.5%;
 }
-.portfolio-list> li a{
+
+.portfolio-list>li>a {
   display: block;
+}
+
+.pf-link{
+
+}
+
+
+/* skill */
+.skill {
+  position: relative;
+  display: block;
+  background-color: #d1d1d1;
+}
+
+.skill .inner {
+  position: relative;
+  height: 700px;
+}
+
+.skill h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+.mySwiper {
+  width: 100%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  height: 200px !important;
+  width: 200px !important;
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #000 !important;
+}
+
+.swiper-button-prev{
+  left: -100px;
+}
+.swiper-button-next{
+  right: -100px;
 }

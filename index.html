@@ -36,8 +36,11 @@
   <script src="js/prefixfree.min.js"></script>
   <script src="js/respond.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
   <link rel="stylesheet" href="js/swiper/swiper.min.css">
   <script src="js/swiper/swiper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <!-- aos -->
   <link href="js/aos/aos.css" rel="stylesheet">
@@ -53,6 +56,17 @@
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <!-- fullpage -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+
+
+  <!-- Progressbar 관련 -->
+  <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
@@ -60,7 +74,7 @@
 
 <body>
   <div class="wrap">
-    <header class="header" id="">
+    <!-- <header class="header" id="">
       <div class="inner">
         <ul class="gnb">
           <li><a href="#home">home</a></li>
@@ -72,186 +86,222 @@
           <li><a href="이력서.pdf">me</a></li>
         </ul>
       </div>
-    </header>
+    </header> -->
     <section class="visual" id="visual">
-
+      <div class="container">
+        <div class="grid-content img1">이미지1</div>
+        <div class="grid-content pic">
+        </div>
+        <div class="grid-content img2">이미지2</div>
+        <div class="grid-content img3">이미지3</div>
+        <div class="grid-content img4">카테고리</div>
+        <div class="grid-content line">라인</div>
+      </div>
     </section>
     <section class="profile" id="profile">
       <div class="inner">
+        <h2>ABOUT ME</h2>
+        <div class="introduce clearfix">
+          <img src="/images/hm.jpg" width="330" alt="프로필사진">
+          <div class="introduce-txt">
+            <p>
+              안녕하세요!<br>
+              도전을 두려워하지 않으며 끊임없이 배우는 사람 김혜미입니다:D<br>
 
+              세상에는 많은 퍼블리셔가 있고, 퍼블리싱은 결국 누구나 할 수 있다고 생각합니다.<br>
+              저는 피드백을 유연히 받아들이고 대화로써 클라이언트와 모두가 만족하는 결과물을 내는 퍼블리셔가 꿈이며,<br>
+              나아가 프론트엔드 개발자가 되기 위해 오늘도 열심히 헤엄치는 중입니다!🏊🏻‍♀️
+            </p>
+            <ul>
+              <li>
+                <span>education</span>
+                2022 그린컴퓨터아트학원 '스마트혼합-뷰 활용 FE 개발자 양성과정' 수료
+              </li>
+              <li>
+                <span></span>
+                2020 대원대학교 멀티미디어학과 졸업
+              </li>
+              <li>
+                <span>experience</span>
+                2021 ㈜엑스엠 인하우스 디자이너
+              </li>
+              <li>
+                <span>CERTIFICATE</span>
+                컴퓨터그래픽스운용기능사
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
+
     <section class="portfolio" id="portfolio">
       <div class="inner">
 
-        <h2>portfolio</h2>
+        <h2 class="title">PORTFOLIO</h2>
         <div class="portfolio-wrap">
           <h3>Publishing Clone Coding</h3>
-          <div class="portfolio-cate">
-            <h4>Personal Clone</h4>
 
-            <ul class="portfolio-list">
-              <li>
-                <h5>풍림무약주식회사
-                  <span>모바일/PC 아이콘</span>
-                </h5>
-                <a href="https://qwertymi.github.io/richwood/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/richwood/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/richwood" target="_blank">Git</a>
-                  <a href="https://richwood.net/" target="_blank">Origin</a>
+          <div class="about-main">
+            <div class="about-main-box">
+              <!-- Swiper 슬라이드 -->
+              <div class="swiper-container sw-about-2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <i>
+                        <img src="http://via.placeholder.com/600x665" alt="">
+                      </i>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <i>
+                        <img src="http://via.placeholder.com/600x665" alt="">
+                      </i>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <i>
+                        <img src="http://via.placeholder.com/600x665" alt="">
+                      </i>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <i>
+                        <img src="http://via.placeholder.com/600x665" alt="">
+                      </i>
+                    </a>
+                  </div>
+
                 </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="about-menu">
+            <ul class="about-menu-list">
+              <li>
+                <a href="#">
+                  <i>
+                    <img src="images/list01.png" alt="">
+                  </i>
+                  <p>
+                    풍림무약주식회사                    
+                    <span class="material-symbols-outlined">
+                      phone_iphone
+                    </span>
+                    <span class="material-symbols-outlined">
+                      desktop_windows
+                    </span>
+                    <br>
+                    <small>작업기간 : 2Mth</small>
+                    <ul class="pf-link">
+                      <li><a href="https://qwertymi.github.io/richwood/" target="_blank">Work</a></li>  
+                      <li><a href="https://github.com/qwertymi/richwood" target="_blank">Git</a></li> 
+                      <li><a href="https://richwood.net/" target="_blank">Origin</a></li> 
+                    </ul>
+                  </p>
+                </a>
               </li>
               <li>
-                <h5>정육각
-                  <span>모바일/PC 아이콘</span>
-                </h5>
-                <a href="https://qwertymi.github.io/jungyuckack/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
+                <a href="#">
+                  <i>
+                    <img src="images/list02.png" alt="">
+                  </i>
+                  <p>
+                    정육각                    
+                    <span class="material-symbols-outlined">
+                      phone_iphone
+                    </span>
+                    <span class="material-symbols-outlined">
+                      desktop_windows
+                    </span>
+                    <br>
+                    <small>작업기간 : 7Day</small>
+                    <ul class="pf-link">
+                      <li><a href="https://qwertymi.github.io/jungyuckack/" target="_blank">Work</a></li>
+                      <li><a href="https://github.com/qwertymi/jungyuckack" target="_blank">Git</a></li>
+                      <li><a href="https://www.jeongyookgak.com/index" target="_blank">Origin</a> </li>
+                    </ul>
+                  </p>
                 </a>
-                <div>
-                  <a href="https://qwertymi.github.io/jungyuckack/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/jungyuckack" target="_blank">Git</a>
-                  <a href="https://www.jeongyookgak.com/index" target="_blank">Origin</a>
-                </div>
               </li>
               <li>
-                <h5>사이트제목
-                  <span>모바일/PC 아이콘</span>
-                </h5>
-                <a href="클론주소" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
+                <a href="#">
+                  <i>
+                    <img src="http://via.placeholder.com/270x140" alt="">
+                  </i>
+                  <p>
+                    코레일
+                    <span class="material-symbols-outlined">
+                      phone_iphone
+                    </span>
+                    <span class="material-symbols-outlined">
+                      desktop_windows
+                    </span>
+                    <br>
+                    <small>작업기간 : 1Mth</small>
+                    <ul class="pf-link">
+                      <li><a href="https://qwertymi.github.io/richwood/" target="_blank">Work</a></li>  
+                      <li><a href="https://github.com/qwertymi/richwood" target="_blank">Git</a></li> 
+                      <li><a href="https://richwood.net/" target="_blank">Origin</a></li> 
+                    </ul>
+                  </p>
                 </a>
-                <div>
-                  <a href="클론주소" target="_blank">Work</a>
-                  <a href="깃허브주소" target="_blank">Git</a>
-                  <a href="원본주소" target="_blank">Origin</a>
-                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <i>
+                    <img src="http://via.placeholder.com/270x140" alt="">
+                  </i>
+                  <p>
+                    준비중                  
+                    
+                    <br>
+                    <small>작업기간 : </small>
+                    <ul class="pf-link">
+                      <li><a href="#" target="_blank">Work</a></li>  
+                      <li><a href="#" target="_blank">Git</a></li> 
+                      <li><a href="#" target="_blank">Origin</a></li> 
+                    </ul>
+                  </p>
+                </a>
               </li>
             </ul>
-
           </div>
-          <div class="portfolio-cate">
-            <h4>Study Clone</h4>
-            <ul class="portfolio-list">
-              <li>
-                <h5>K-Water
-                  <span>모바일/PC 아이콘</span>
-                </h5>
-                <a href="https://qwertymi.github.io/K-water/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/K-water/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/K-water" target="_blank">Git</a>
-                  <a href="https://www.kwater.or.kr/main.do?s_mid=1" target="_blank">Origin</a>
-                </div>
-              </li>
-              <li>
-                <h5>거제청년센터|이룸
-                  <span>모바일/PC/Vue.js</span>
-                </h5>
-                <a href="https://qwertymi.github.io/geojeyouth/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/geojeyouth/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/geojeyouth" target="_blank">Git</a>
-                  <a href="https://geojeyouth.com/web/" target="_blank">Origin</a>
-                  
-                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
 
-                </div>
-              </li>
-              <li>
-                <h5>노엘로힐스
-                  <span>모바일/PC/Vue.js</span>
-                </h5>
-                <a href="https://qwertymi.github.io/noelohills/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/noelohills/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/noelohills" target="_blank">Git</a>
-                  <a href="https://noelohills.com/" target="_blank">Origin</a>
-
-                  <a href="https://qwertymi.github.io/noelo-vuepage/" target="_blank">vue.js work</a>
-                  <a href="https://github.com/qwertymi/vuenoelo" target="_blank">vue.js github</a>
-
-                </div>
-              </li>
-              <li>
-                <h5>마시그래이
-                  <span>모바일/PC/Vue.js</span>
-                </h5>
-                <a href="https://qwertymi.github.io/masigray/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/masigray/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/masigray" target="_blank">Git</a>
-                  <a href="https://www.masigray.com:5021/main/main.asp" target="_blank">Origin</a>
-
-                  <a href="https://qwertymi.github.io/masi-vuepage/" target="_blank">vue.js work</a>
-                  <a href="https://github.com/qwertymi/vuemasi" target="_blank">vue.js github</a>
-
-                </div>
-              </li>
-              <li>
-                <h5>STX 건설
-                  <span>PC/Vue.js</span>
-                </h5>
-                <a href="https://qwertymi.github.io/stxconst/" target="_blank">
-                  <img src="http://placeimg.com/400/360/tech/grayscale" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://qwertymi.github.io/stxconst/" target="_blank">Work</a>
-                  <a href="https://github.com/qwertymi/stxconst" target="_blank">Git</a>
-                  <a href="http://www.stxconst.co.kr/" target="_blank">Origin</a>
-
-                  <a href="https://qwertymi.github.io/stx-vuepage/" target="_blank">vue.js work</a>
-                  <a href="https://github.com/qwertymi/vuestx" target="_blank">vue.js github</a>
-
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="portfolio-wrap">
-          <h3>Vue.js Coding</h3>
-          <div class="portfolio-cate">
-            <h4>Study Vue.js</h4>
-            <ul class="portfolio-list">
-              <li>
-                <h5>Memo(Vue.js)</h5>
-                <p>프로젝트 설명</p>
-                <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-                <a href="피그마 주소" target="_blank">Figma</a>
-              </li>
-              <li>
-                <h5>지브리 스튜디오 API(Vue.js)</h5>
-                <p>프로젝트 설명</p>
-                <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-                <a href="피그마 주소" target="_blank">Figma</a>
-              </li>
-              <li>
-                <h5>TodoApp (Vue.js/RESTFull[jsonServer])</h5>
-                <p>프로젝트 설명</p>
-                <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-        <div class="portfolio-wrap">
 
         </div>
+    </section>
+
+    <section class="skill">
+      <div class="inner">
+        <h2 class="title">Skill & Tool</h2>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="html"></div>
+            <div class="swiper-slide" id="java"></div>
+            <div class="swiper-slide" id="css"></div>
+            <div class="swiper-slide" id="jquery"></div>
+            <div class="swiper-slide" id="scss"></div>
+            <div class="swiper-slide" id="vue"></div>
+            <div class="swiper-slide" id="figma"></div>
+            <div class="swiper-slide" id="github"></div>
+            <div class="swiper-slide" id="photoshop"></div>
+            <div class="swiper-slide" id="illustrator"></div>
+            <div class="swiper-slide" id="afec"></div>
+            <div class="swiper-slide" id="premiere"></div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
       </div>
     </section>
