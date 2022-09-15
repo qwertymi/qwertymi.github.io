@@ -48,6 +48,7 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
+  
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
       color: '#777',
@@ -87,7 +88,7 @@ window.onload = function () {
   }
 
   let bar_html = makeCircle(html, 'HTML', '#aaa', '#333');
-  let bar_java = makeCircle(java, 'JAVA', '#aaa', '#333');
+  let bar_js = makeCircle(js, 'JS', '#aaa', '#333');
   let bar_css = makeCircle(css, 'CSS', '#aaa', '#333');
   let bar_jquery = makeCircle(jquery, 'JQuery', '#aaa', '#333');
   let bar_scss = makeCircle(scss, 'SCSS', '#aaa', '#333');
@@ -105,9 +106,9 @@ window.onload = function () {
 
   let barAni = () => {
     bar_html.animate(0.95);
-    bar_java.animate(0.7)
-    bar_css.animate(0.9);
-    bar_jquery.animate(0.8);
+    bar_js.animate(0.72)
+    bar_css.animate(0.91);
+    bar_jquery.animate(0.78);
     bar_scss.animate(0.8); 
     bar_vue.animate(0.7);
     bar_figma.animate(0.9);
@@ -120,7 +121,7 @@ window.onload = function () {
 
   let barAniRe = () => {
     bar_html.animate(0);
-    bar_java.animate(0)
+    bar_js.animate(0)
     bar_css.animate(0);
     bar_jquery.animate(0);
     bar_scss.animate(0); 
@@ -144,6 +145,7 @@ window.onload = function () {
     },
     offset: '80%'
   });
+  
   new Waypoint({
     element: $('.portfolio'),
     handler: function (direction) {

@@ -64,6 +64,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
 
+  <!-- 차트 -->
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
 
   <!-- Progressbar 관련 -->
   <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
@@ -89,21 +92,13 @@
       </div>
     </header> -->
     <section class="visual" id="visual">
-      <div class="container">
-        <div class="grid-content img1">이미지1</div>
-        <div class="grid-content pic">
-        </div>
-        <div class="grid-content img2">이미지2</div>
-        <div class="grid-content img3">이미지3</div>
-        <div class="grid-content img4">카테고리</div>
-        <div class="grid-content line">라인</div>
-      </div>
+
     </section>
     <section class="profile" id="profile">
       <div class="inner">
         <h2>ABOUT ME</h2>
         <div class="introduce clearfix">
-          <img src="/images/hm.jpg" width="330" alt="프로필사진">
+          <img src="/images/hm.jpg" width="280" alt="프로필사진">
           <div class="introduce-txt">
             <p>
               안녕하세요!<br>
@@ -133,6 +128,7 @@
             </ul>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -143,7 +139,7 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="html"></div>
-            <div class="swiper-slide" id="java"></div>
+            <div class="swiper-slide" id="js"></div>
             <div class="swiper-slide" id="css"></div>
             <div class="swiper-slide" id="jquery"></div>
             <div class="swiper-slide" id="scss"></div>
@@ -163,11 +159,12 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-      <div class="pf-inner">
+      <div class="inner">
 
         <h2 class="title">PORTFOLIO</h2>
+
         <div class="portfolio-wrap clearfix">
-          <h3>Publishing Clone Coding</h3>
+          <span class="subtitle">Publishing Clone Coding</span>
 
           <div class="pf-main">
             <div class="shadow"></div>
@@ -193,7 +190,6 @@
                       desktop_windows
                     </span>
                     <br>
-
                     <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
                     <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
                     <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
@@ -244,15 +240,15 @@
                       desktop_windows
                     </span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
+                    <a href="https://qwertymi.github.io/jungyuckack/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/jungyuckack" target="_blank" class="pf-a">Git</a>
+                    <a href="https://www.jeongyookgak.com/index" target="_blank" class="pf-a">Origin</a>
                   </p>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
+                    <a href="https://qwertymi.github.io/K-water/" target="_blank">
                       <i class="sw-pf-imgwrap">
                         <img src="images/main04.png" alt="">
                       </i>
@@ -269,45 +265,45 @@
                       desktop_windows
                     </span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
+                    <a href="https://qwertymi.github.io/K-water/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/K-water" target="_blank" class="pf-a">Git</a>
+                    <a href="https://www.kwater.or.kr/" target="_blank" class="pf-a">Origin</a>
                   </p>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
+                    <a href="https://qwertymi.github.io/noelohills/" target="_blank">
                       <i class="sw-pf-imgwrap">
                         <img src="images/main05.png" alt="">
                       </i>
                     </a>
                   </div>
                   <p class="pf-txtbox">
-                      <span class="pf-name">
-                        노엘로힐스
-                      </span>
-                      <span class="material-symbols-outlined">
-                        phone_iphone
-                      </span>
-                      <span class="material-symbols-outlined">
-                        desktop_windows
-                      </span>
-                      <br />
-                      <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                      <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                      <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
-                      <br />
-                      <span class="pf-vuetag">Vue.js</span>
-                      <br>
-                      <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a vue-a">Work</a>
-                      <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a vue-a">Git</a>
-                    </p>
+                    <span class="pf-name">
+                      노엘로힐스
+                    </span>
+                    <span class="material-symbols-outlined">
+                      phone_iphone
+                    </span>
+                    <span class="material-symbols-outlined">
+                      desktop_windows
+                    </span>
+                    <br />
+                    <a href="https://qwertymi.github.io/noelohills/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/noelohills" target="_blank" class="pf-a">Git</a>
+                    <a href="https://noelohills.com/" target="_blank" class="pf-a">Origin</a>
+                    <br />
+                    <span class="pf-vuetag">Vue.js</span>
+                    <br>
+                    <a href="https://qwertymi.github.io/noelo-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
+                    <a href="https://github.com/qwertymi/vuenoelo" target="_blank" class="pf-a vue-a">Git</a>
+                  </p>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
+                    <a href="https://qwertymi.github.io/geojeyouth/" target="_blank">
                       <i class="sw-pf-imgwrap">
                         <img src="images/main06.png" alt="">
                       </i>
@@ -324,19 +320,19 @@
                       desktop_windows
                     </span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>                      <br />
+                    <a href="https://qwertymi.github.io/geojeyouth/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/geojeyouth" target="_blank" class="pf-a">Git</a>
+                    <a href="https://geojeyouth.com/web/" target="_blank" class="pf-a">Origin</a> <br />
                     <span class="pf-vuetag">Vue.js</span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a vue-a">Git</a>
+                    <a href="https://qwertymi.github.io/geoje-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
+                    <a href="https://github.com/qwertymi/vue-geoje" target="_blank" class="pf-a vue-a">Git</a>
                   </p>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
+                    <a href="https://qwertymi.github.io/masigray/" target="_blank">
                       <i class="sw-pf-imgwrap">
                         <img src="images/main07.png" alt="">
                       </i>
@@ -353,20 +349,20 @@
                       desktop_windows
                     </span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
+                    <a href="https://qwertymi.github.io/masigray/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/masigray" target="_blank" class="pf-a">Git</a>
+                    <a href="https://www.masigray.com" target="_blank" class="pf-a">Origin</a>
                     <br />
                     <span class="pf-vuetag">Vue.js</span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a vue-a">Git</a>
+                    <a href="https://qwertymi.github.io/masi-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
+                    <a href="https://github.com/qwertymi/vuemasi" target="_blank" class="pf-a vue-a">Git</a>
                   </p>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
+                    <a href="https://qwertymi.github.io/stxconst/" target="_blank">
                       <i class="sw-pf-imgwrap">
                         <img src="images/main08.png" alt="">
                       </i>
@@ -383,14 +379,14 @@
                       desktop_windows
                     </span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
+                    <a href="https://qwertymi.github.io/stxconst/" target="_blank" class="pf-a">Work</a>
+                    <a href="https://github.com/qwertymi/stxconst" target="_blank" class="pf-a">Git</a>
+                    <a href="http://www.stxconst.co.kr/" target="_blank" class="pf-a">Origin</a>
                     <br />
                     <span class="pf-vuetag">Vue.js</span>
                     <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a vue-a">Git</a>
+                    <a href="https://qwertymi.github.io/stx-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
+                    <a href="https://github.com/qwertymi/vuestx" target="_blank" class="pf-a vue-a">Git</a>
                   </p>
                 </div>
 
@@ -576,8 +572,8 @@
             </ul>
           </div>
 
-
         </div>
+      </div>
     </section>
 
 
