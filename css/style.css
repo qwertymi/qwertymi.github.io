@@ -269,14 +269,14 @@ body::-webkit-scrollbar-track {
 
 
 
-.about-main {
+.pf-main {
   position: relative;
   float: left;
   width: 50%;
   height: 665px;
 }
 
-.about-main-box {
+.pf-main-box {
   position: absolute;
   left: 0;
   top: 0;
@@ -284,15 +284,16 @@ body::-webkit-scrollbar-track {
   height: 100%;
   overflow: hidden;
   background-color: #fff;
-  /* display: none; */
+  border-radius: 10px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-main-box a {
+.pf-main-box a {
   display: block;
   height: 100%;
 }
 
-.about-main-box a i {
+.pf-main-box a i {
   position: relative;
   display: block;
   width: 100%;
@@ -300,21 +301,23 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
-.about-main-box a i img {
+.pf-main-box a i img {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
-  filter: brightness(0.7);
+  bottom: 100%;
+  transform: translate(-50%, 100%);
+  transition: all 3s;
+  transition-delay: 0.3s;
+  /* filter: brightness(0.98); */
 }
 
-.about-main-box a i:hover img {
-  transform: translate(-50%, -50%) scale(1.1);
+.pf-main-box a i:hover img {
+  bottom: 0;
+  transform: translate(-50% , 0%);
   filter: brightness(1);
 }
 
-.about-main-box a p {
+.pf-main-box a p {
   font-size: 2rem;
   line-height: 1.2;
   color: #1a1a1d;
@@ -324,13 +327,13 @@ body::-webkit-scrollbar-track {
 }
 
 
-.about-main-box a span {
+.pf-main-box a span {
   color: #77777e;
   font-size: 1.6rem;
 }
 
 /* 위치 조절하기  */
-.sw-about-2-control {
+.sw-pf-control {
   position: absolute;
   left: 0;
   bottom: 13.68rem;
@@ -340,12 +343,12 @@ body::-webkit-scrollbar-track {
 }
 
 /* 가능하면 아래처럼 pg 를 넓혀준다 */
-.sw-about-2-pg {
+.sw-pf-pg {
   width: 100%;
 }
 
 /* 일반적인 버튼 모양 */
-.sw-about-2-pg .swiper-pagination-bullet {
+.sw-pf-pg .swiper-pagination-bullet {
   background: #fff;
   width: 0.432rem;
   height: 0.432rem;
@@ -355,7 +358,7 @@ body::-webkit-scrollbar-track {
 }
 
 /* 포커스가 된 경우 버튼 모양 */
-.sw-about-2-pg .swiper-pagination-bullet-active {
+.sw-pf-pg .swiper-pagination-bullet-active {
   /* width: 12px;
   height: 12px; */
   transform: scale(2.0);
@@ -363,7 +366,7 @@ body::-webkit-scrollbar-track {
 }
 
 /* 애니메이션 시작 모습 */
-.sw-about-2 .swiper-slide>h5 {
+.sw-pf .swiper-slide>h5 {
   position: absolute;
   left: 1.44rem;
   top: 14.4rem;
@@ -374,7 +377,7 @@ body::-webkit-scrollbar-track {
   transform: translateY(7.2rem);
 }
 
-.sw-about-2 .swiper-slide>p {
+.sw-pf .swiper-slide>p {
   position: absolute;
   left: 1.44rem;
   top: 19.44rem;
@@ -388,14 +391,14 @@ body::-webkit-scrollbar-track {
 }
 
 /* 애니메이션 포커스 모습  */
-.sw-about-2 .swiper-slide-active>h5 {
+.sw-pf .swiper-slide-active>h5 {
   /* left: 20px;
   top: 200px; */
   opacity: 1;
   transform: translateY(0);
 }
 
-.sw-about-2 .swiper-slide-active>p {
+.sw-pf .swiper-slide-active>p {
   /* left: 20px;
   top: 270px; */
   opacity: 1;
@@ -403,7 +406,7 @@ body::-webkit-scrollbar-track {
 }
 
 
-.about-menu {
+.pf-listbox {
   float: right;
   width: 45%;
   height: 100%;
@@ -411,15 +414,15 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
-.about-menu-list {}
+.pf-list {}
 
-.about-menu-list>li {
+.pf-list>li {
   position: relative;
   height: 140px;
   margin-bottom: 35px;
 }
 
-.about-menu-list>li>a {
+.pf-list>li>a {
   position: relative;
   display: block;
   width: 100%;
@@ -427,7 +430,7 @@ body::-webkit-scrollbar-track {
   padding-left: 300px;
 }
 
-.about-menu-list>li>a i {
+.pf-list>li>a i {
   position: absolute;
   left: 0;
   top: 0;
@@ -436,7 +439,7 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
-.about-menu-list>li>a i em {
+.pf-list>li>a i em {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -446,21 +449,20 @@ body::-webkit-scrollbar-track {
   font-size: 5rem;
 }
 
-.about-menu-list>li>a i img {
+.pf-list>li>a i img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  filter: brightness(0.7);
   transition: all 0.3s;
 }
 
-.about-menu-list>li>a:hover i img {
-  transform: translate(-50%, -50%) scale(1.1);
+.pf-list>li>a:hover i img {
+  transform: translate(-50%, -50%) scale(1.03);
   filter: brightness(1);
 }
 
-.about-menu-list>li>a p {
+.pf-list>li>a p {
   position: relative;
   width: 100%;
   font-size: 20px;
@@ -469,12 +471,12 @@ body::-webkit-scrollbar-track {
   font-weight: 500;
   padding-top: 5px;
 }
-.about-menu-list>li>a p small{
+.pf-list>li>a p small{
   font-size: 15px;
   color: #1a1a1d;
 
 }
-.about-menu-list>li>a p span{
+.pf-list>li>a p span{
   vertical-align: text-bottom;
 }
 .pf-link{
@@ -495,55 +497,24 @@ body::-webkit-scrollbar-track {
 }
 
 
-.about-menu-focus p {
+.pf-listbox-focus p {
   color: #86d5d6 !important;
 }
 
-.about-menu-focus p small{
+.pf-listbox-focus p small{
   color: #aad4d4 !important; 
 }
 
-.about-menu-focus i {
-  background-color: rgba(134, 213, 214, 1) !important;
+.pf-listbox-focus i {
+  background-color: #ddd !important;
 }
 
 
-.about-menu-focus i img {
+.pf-listbox-focus i img {
   opacity: 0.5 !important;
   /* display: none; */
 }
 
-
-
-
-
-
-
-.portfolio-cate {
-  position: relative;
-}
-
-.portfolio-list {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-list>li {
-  position: relative;
-  float: left;
-  width: 30.3%;
-  text-align: center;
-  overflow: hidden;
-  margin: 20px 1.5% 50px 1.5%;
-}
-
-.portfolio-list>li>a {
-  display: block;
-}
-
-.pf-link{
-
-}
 
 
 /* skill */
@@ -604,4 +575,12 @@ body::-webkit-scrollbar-track {
 }
 .swiper-button-next{
   right: -100px;
+}
+
+/* life */
+.life{
+  position: relative;
+  display: block;
+  height: 2000px;
+  background-color: #000;
 }
