@@ -86,9 +86,10 @@ body::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.title{
+.title {
   padding: 80px 0 20px 0;
 }
+
 /* header */
 .header {
   position: fixed;
@@ -233,7 +234,12 @@ body::-webkit-scrollbar-track {
   position: relative;
   display: block;
   background-color: #f3f2f3;
-  height: 2000px;
+padding-bottom: 200px;
+}
+
+.pf-inner {
+  width: 83%;
+  margin: 0 auto;
 }
 
 .portfolio h2 {
@@ -249,177 +255,119 @@ body::-webkit-scrollbar-track {
   margin-bottom: 20px;
 }
 
-.portfolio h4 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.portfolio h5 {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.portfolio-wrap {
-  position: relative;
-}
-
-
-
-
-
 .pf-main {
   position: relative;
   float: left;
-  width: 50%;
-  height: 665px;
+  width: 700px;
+  height: 830px;
 }
 
-.pf-main-box {
-  position: absolute;
-  left: 0;
-  top: 0;
+.sw-pf {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.pf-main-box a {
-  display: block;
-  height: 100%;
+.sw-pf-img{
+  width: 700px;
+  height: 665px;
+  border-radius: 10px;
 }
 
-.pf-main-box a i {
+.shadow{
+  position: absolute;
+  width: 700px;
+  height: 665px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 10px rgba(41, 41, 41, 0.07);
+}
+
+.sw-pf-imgwrap {
   position: relative;
   display: block;
   width: 100%;
-  height: 665px;
+  height: 100%;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.pf-main-box a i img {
+.sw-pf-imgwrap img {
   position: absolute;
   left: 50%;
   bottom: 100%;
   transform: translate(-50%, 100%);
   transition: all 3s;
   transition-delay: 0.3s;
-  /* filter: brightness(0.98); */
 }
 
-.pf-main-box a i:hover img {
+.sw-pf-imgwrap:hover img {
   bottom: 0;
-  transform: translate(-50% , 0%);
+  transform: translate(-50%, 0%);
   filter: brightness(1);
 }
 
-.pf-main-box a p {
-  font-size: 2rem;
-  line-height: 1.2;
-  color: #1a1a1d;
-  margin-top: 2.16rem;
-  font-weight: 500;
-  margin-bottom: 0.72rem;
-}
-
-
-.pf-main-box a span {
-  color: #77777e;
-  font-size: 1.6rem;
-}
-
-/* 위치 조절하기  */
-.sw-pf-control {
+.pf-txtbox{
   position: absolute;
-  left: 0;
-  bottom: 13.68rem;
+  top: 680px;
   display: block;
   width: 100%;
-  z-index: 9;
+  /* background-color: #fff;   */
+  z-index: 9999;
 }
 
-/* 가능하면 아래처럼 pg 를 넓혀준다 */
-.sw-pf-pg {
-  width: 100%;
+.pf-name{
+
+  font-size: 19px;
+  vertical-align: top;
 }
 
-/* 일반적인 버튼 모양 */
-.sw-pf-pg .swiper-pagination-bullet {
-  background: #fff;
-  width: 0.432rem;
-  height: 0.432rem;
-  margin: 0 0.72rem;
-  opacity: 0.7;
+.pf-txtbox .material-symbols-outlined{
+  font-size: 20px;
+}
+
+.pf-a{
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 7px 15px 3px;
+  border-radius: 7px;
+  background-color: #d8d8d8;
+  margin: 0 1px;
   transition: all 0.3s;
 }
-
-/* 포커스가 된 경우 버튼 모양 */
-.sw-pf-pg .swiper-pagination-bullet-active {
-  /* width: 12px;
-  height: 12px; */
-  transform: scale(2.0);
-  opacity: 1;
+.pf-a:hover{
+  background-color: #e8c0ff;
 }
-
-/* 애니메이션 시작 모습 */
-.sw-pf .swiper-slide>h5 {
-  position: absolute;
-  left: 1.44rem;
-  top: 14.4rem;
-  font-size: 3rem;
-  color: #fff;
-  transition: all 0.5s 0s ease-in-out;
-  opacity: 0;
-  transform: translateY(7.2rem);
+.vue-a:hover{
+  background-color: #8edbbe !important;
 }
-
-.sw-pf .swiper-slide>p {
-  position: absolute;
-  left: 1.44rem;
-  top: 19.44rem;
-  width: 90%;
-
-  font-size: 1.4rem;
-  color: #fff;
-  transition: all 0.5s 0.2s ease-in-out;
-  opacity: 0;
-  transform: translateY(7.2rem);
+.pf-vuetag{
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 10px;
 }
-
-/* 애니메이션 포커스 모습  */
-.sw-pf .swiper-slide-active>h5 {
-  /* left: 20px;
-  top: 200px; */
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sw-pf .swiper-slide-active>p {
-  /* left: 20px;
-  top: 270px; */
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 .pf-listbox {
   float: right;
-  width: 45%;
   height: 100%;
-
+  width: 830px;
   overflow: hidden;
 }
 
-.pf-list {}
+.pf-list {
+  display: flex;
+  height: 665px;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
 
 .pf-list>li {
   position: relative;
-  height: 140px;
-  margin-bottom: 35px;
+  width: 270px;
+  height: 160px;
 }
 
 .pf-list>li>a {
@@ -427,15 +375,15 @@ body::-webkit-scrollbar-track {
   display: block;
   width: 100%;
   height: 100%;
-  padding-left: 300px;
 }
 
 .pf-list>li>a i {
   position: absolute;
   left: 0;
   top: 0;
-  width: 270px;
-  height: 140px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -471,15 +419,18 @@ body::-webkit-scrollbar-track {
   font-weight: 500;
   padding-top: 5px;
 }
-.pf-list>li>a p small{
+
+.pf-list>li>a p small {
   font-size: 15px;
   color: #1a1a1d;
 
 }
-.pf-list>li>a p span{
+
+.pf-list>li>a p span {
   vertical-align: text-bottom;
 }
-.pf-link{
+
+.pf-link {
   position: absolute;
   bottom: 30px;
   left: 300px;
@@ -492,7 +443,7 @@ body::-webkit-scrollbar-track {
   margin-right: 30px;
 }
 
-.pf-link a:hover{
+.pf-link a:hover {
   color: #f1adff;
 }
 
@@ -501,8 +452,8 @@ body::-webkit-scrollbar-track {
   color: #86d5d6 !important;
 }
 
-.pf-listbox-focus p small{
-  color: #aad4d4 !important; 
+.pf-listbox-focus p small {
+  color: #aad4d4 !important;
 }
 
 .pf-listbox-focus i {
@@ -566,19 +517,21 @@ body::-webkit-scrollbar-track {
   align-items: center;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: #000 !important;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   left: -100px;
 }
-.swiper-button-next{
+
+.swiper-button-next {
   right: -100px;
 }
 
 /* life */
-.life{
+.life {
   position: relative;
   display: block;
   height: 2000px;

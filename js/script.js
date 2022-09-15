@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
   let swAbout2 = new Swiper('.sw-pf', {
     loop: true,
     observer: true,
@@ -54,7 +52,7 @@ window.onload = function () {
     let bar = new ProgressBar.Circle(_id, {
       color: '#777',
       strokeWidth: 4,
-      trailWidth: 3,
+      trailWidth: 1,
       easing: 'easeOut',
       duration: 1400,
 
@@ -147,7 +145,7 @@ window.onload = function () {
     offset: '80%'
   });
   new Waypoint({
-    element: $('.life'),
+    element: $('.portfolio'),
     handler: function (direction) {
       if (direction == 'down') {
         barAniRe();
