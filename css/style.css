@@ -172,6 +172,8 @@ body::-webkit-scrollbar-track {
 
 .introduce>img {
   float: left;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
 }
 
 .introduce-txt {
@@ -179,12 +181,15 @@ body::-webkit-scrollbar-track {
 }
 
 .introduce-txt p {
-  margin-bottom: 50px;
-  line-height: 1.6;
+  margin-bottom: 45px;
+  line-height: 1.8;
   white-space: nowrap;
 }
 
-.introduce-txt ul {}
+.introduce-txt ul {
+  position: relative;
+  display: block;
+}
 
 .introduce-txt ul li {
   position: relative;
@@ -193,56 +198,65 @@ body::-webkit-scrollbar-track {
 }
 
 .introduce-txt ul li span {
-  display: inline-block;
+  display: block;
   width: 150px;
+  font-weight: 600;
+  margin: 20px 0 5px 0;
 }
 
 .introduce-bottom {
   position: relative;
   display: block;
-  margin-top: 120px;
+  height: 300px;
+  margin-top: 175px;
 }
-.introduce-bottom::before{
+
+.introduce-bottom::after{
   content: '';
   display: block;
   position: absolute;
-  right: 0;
+  top: 0;
+  right: 100px;
+  min-width: 1920px;
   width: 100vw;
   height: 300px;
-  background-color: #ececec;
+  border-radius: 0 150px 150px 0;
+  background-color: #f8f8f8;
+  box-shadow: 5px 5px 15px rgb(140, 140, 140, 0.2);
   z-index: -9;
 }
 
 .char-info {
   position: relative;
   display: block;
+  padding-top: 6px;
 }
 
 .char-info li {
   position: relative;
   display: block;
   float: left;
-  width: 22%;
+  width: 23%;
   margin-right: 15px;
-  border: 1px solid red;
 }
+
 .char-info li:nth-child(1) {
   position: relative;
   display: block;
-  background: url('../images/icon1.png')no-repeat top center;
-  background-size: 60%;
+  background: url('../images/icon2.png')no-repeat center 16%;
+  background-size: 48%;
 }
 .char-info li:nth-child(2) {
   position: relative;
   display: block;
-  background: url('../images/icon2.png')no-repeat top center;
-  background-size: 55%;
+  background: url('../images/icon1.png')no-repeat  center 18%;
+  background-size: 47%;
 }
 .char-info li:nth-child(3) {
   position: relative;
   display: block;
-  background: url('../images/icon3.png')no-repeat top center;
-  background-size: 55%;
+  background: url('../images/icon3.png')no-repeat center 10%;
+  background-size: 49%;
 }
 
 .char-info li p {
@@ -251,6 +265,7 @@ body::-webkit-scrollbar-track {
   text-align: center;
   padding-top: 160px;
   margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .char-info li p span {
@@ -273,7 +288,7 @@ body::-webkit-scrollbar-track {
   display: block;
 }
 .polygon li{
-  width: 413px;
+  width: 435px;
   height: 391px;
   position: absolute;
   right: 0;
@@ -288,7 +303,7 @@ body::-webkit-scrollbar-track {
   background: url('../images/polygon-c.png') no-repeat center;
 
   animation-name: polygon;
-  animation-duration:1.5s;
+  animation-duration:1.2s;
   animation-timing-function: ease-in-out;
 }
 
