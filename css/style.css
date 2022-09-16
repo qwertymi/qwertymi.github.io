@@ -88,6 +88,7 @@ body::-webkit-scrollbar-track {
 }
 
 .title {
+  letter-spacing: 1.2px;
   padding: 80px 0 5px 0;
 }
 
@@ -149,7 +150,7 @@ body::-webkit-scrollbar-track {
 }
 
 .profile .inner {
-  height: 100%;
+  width: 1100px;
 }
 
 .profile h2 {
@@ -196,7 +197,115 @@ body::-webkit-scrollbar-track {
   width: 150px;
 }
 
+.introduce-bottom {
+  position: relative;
+  display: block;
+  margin-top: 120px;
+}
+.introduce-bottom::before{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  height: 300px;
+  background-color: #ececec;
+  z-index: -9;
+}
 
+.char-info {
+  position: relative;
+  display: block;
+}
+
+.char-info li {
+  position: relative;
+  display: block;
+  float: left;
+  width: 22%;
+  margin-right: 15px;
+  border: 1px solid red;
+}
+.char-info li:nth-child(1) {
+  position: relative;
+  display: block;
+  background: url('../images/icon1.png')no-repeat top center;
+  background-size: 60%;
+}
+.char-info li:nth-child(2) {
+  position: relative;
+  display: block;
+  background: url('../images/icon2.png')no-repeat top center;
+  background-size: 55%;
+}
+.char-info li:nth-child(3) {
+  position: relative;
+  display: block;
+  background: url('../images/icon3.png')no-repeat top center;
+  background-size: 55%;
+}
+
+.char-info li p {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-top: 160px;
+  margin-bottom: 10px;
+}
+
+.char-info li p span {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chart{
+  position: relative;
+  display: block;
+}
+.polygon{
+  position: absolute;
+  right: -10%;
+  top: -70px;
+  display: block;
+}
+.polygon li{
+  width: 413px;
+  height: 391px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.polygon-base{
+  background: url('../images/polygon.png') no-repeat center;
+  background-size: 100%;
+}
+.polygon-color{
+  background: url('../images/polygon-c.png') no-repeat center;
+
+  animation-name: polygon;
+  animation-duration:1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes polygon {
+  0%{
+    background-size: 0%;
+  }
+  85%{
+    background-size: 100%;
+  }
+  93%{
+    background-size: 98%;
+  }
+  100%{
+    background-size: 100%;
+  }
+}
 
 
 /* skill */
@@ -401,6 +510,7 @@ body::-webkit-scrollbar-track {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+
 }
 
 .pf-list>li {
@@ -426,14 +536,8 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
-.pf-list>li>a i em {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  opacity: 0;
-  font-size: 5rem;
+.pf-list>li>a:hover i {
+  border: 1px solid #e0e0e0;
 }
 
 .pf-list>li>a i img {
@@ -442,6 +546,7 @@ body::-webkit-scrollbar-track {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s;
+
 }
 
 .pf-list>li>a:hover i img {
