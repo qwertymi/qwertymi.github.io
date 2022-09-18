@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 
   let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 5,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -45,15 +45,32 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  let swlife = new Swiper(".sw-life", {
+    autoplay: true,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    loopFillGroupWithBlank: true,
+
+    navigation: {
+      nextEl: ".sw-life-next",
+      prevEl: ".sw-life-prev",
+    },
+  });
+
+
 });
 
 window.onload = function () {
+
+  AOS.init();
   
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
       color: '#777',
-      strokeWidth: 4,
-      trailWidth: 1,
+      strokeWidth: 50,
+      trailWidth: 50,
       easing: 'easeOut',
       duration: 1400,
 
@@ -62,11 +79,11 @@ window.onload = function () {
       },
       from: {
         color: _startColor,
-        width: 1
+        width: 50
       },
       to: {
         color: _endColor,
-        width: 4,
+        width: 50,
       },
       step: function (state, circle) {
         circle.path.setAttribute('stroke', state.color);
@@ -81,28 +98,27 @@ window.onload = function () {
 
       }
     });
-    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    bar.text.style.fontSize = '2rem';
+    bar.text.style.fontFamily = 'LeferiBase';
+    bar.text.style.fontSize = '24px';
+    bar.text.style.color = '#333';
     return bar;
 
   }
 
-  let bar_html = makeCircle(html, 'HTML', '#aaa', '#333');
-  let bar_js = makeCircle(js, 'JS', '#aaa', '#333');
-  let bar_css = makeCircle(css, 'CSS', '#aaa', '#333');
-  let bar_jquery = makeCircle(jquery, 'JQuery', '#aaa', '#333');
-  let bar_scss = makeCircle(scss, 'SCSS', '#aaa', '#333');
-  let bar_vue = makeCircle(vue, 'Vue.js', '#aaa', '#333');
-  let bar_figma = makeCircle(figma, 'Figma', '#aaa', '#333');
-  let bar_github = makeCircle(github, 'Github', '#aaa', '#333');
-  let bar_photoshop = makeCircle(photoshop, 'Phtoshop', '#aaa', '#333');
-  let bar_illustrator = makeCircle(illustrator, 'Illustrator', '#aaa', '#333');
-  let bar_afec = makeCircle(afec, 'After Effect', '#aaa', '#333');
-  let bar_premiere = makeCircle(premiere, 'Premiere', '#aaa', '#333');
+  let bar_html = makeCircle(html, 'HTML', '#e73c7e', '#C9D1FF');
+  let bar_js = makeCircle(js, 'JS', '#e73c7e', '#C9D1FF');
+  let bar_css = makeCircle(css, 'CSS', '#e73c7e', '#C9D1FF');
+  let bar_jquery = makeCircle(jquery, 'JQuery','#e73c7e', '#C9D1FF');
+  let bar_scss = makeCircle(scss, 'SCSS', '#e73c7e', '#C9D1FF');
+  let bar_vue = makeCircle(vue, 'Vue.js', '#e73c7e', '#C9D1FF');
+  let bar_figma = makeCircle(figma, 'Figma', '#e73c7e', '#C9D1FF');
+  let bar_github = makeCircle(github, 'Github', '#e73c7e', '#C9D1FF');
+  let bar_photoshop = makeCircle(photoshop, 'Phtoshop', '#e73c7e', '#C9D1FF');
+  let bar_illustrator = makeCircle(illustrator, 'Illustrator', '#e73c7e', '#C9D1FF');
+  let bar_afec = makeCircle(afec, 'After Effect', '#e73c7e', '#C9D1FF');
+  let bar_premiere = makeCircle(premiere, 'Premiere', '#e73c7e', '#C9D1FF');
 
 
-
-  AOS.init();
 
   let barAni = () => {
     bar_html.animate(0.95);
@@ -114,7 +130,7 @@ window.onload = function () {
     bar_figma.animate(0.9);
     bar_github.animate(0.9);
     bar_photoshop.animate(0.9);
-    bar_illustrator.animate(0.95);
+    bar_illustrator.animate(0.93);
     bar_afec.animate(0.8);
     bar_premiere.animate(0.75);
   }
@@ -140,10 +156,10 @@ window.onload = function () {
       if (direction == 'down') {
         barAni();
       } else if (direction == 'up') {
-        barAni();
+        barAniRe();
       }
     },
-    offset: '80%'
+    offset: '90%'
   });
   
   new Waypoint({
@@ -155,6 +171,6 @@ window.onload = function () {
         barAni();
       }
     },
-    offset: '0%'
+    offset: '10%'
   });
 }
