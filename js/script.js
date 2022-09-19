@@ -46,26 +46,24 @@ $(document).ready(function () {
     },
   });
 
-  let swlife = new Swiper(".sw-life", {
-    autoplay: true,
-    slidesPerView: 3,
-    spaceBetween: 10,
-    loop: true,
-    loopFillGroupWithBlank: true,
-
-    navigation: {
-      nextEl: ".sw-life-next",
-      prevEl: ".sw-life-prev",
-    },
-  });
-
-
 });
 
 window.onload = function () {
 
-  AOS.init();
+  new Waypoint({
+    element: $('.polygon-color'),
+    handler: function (direction) {
+      if (direction == 'down') {
+        $('.polygon-color').addClass('polygon-color-draw');
+      } else if (direction == 'up') {
+        $('.polygon-color').addClass('polygon-color-draw');
+      }
+    },
+    offset: '40%'
+  });
   
+  AOS.init();
+
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
       color: '#777',
