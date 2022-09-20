@@ -56,6 +56,11 @@ body {
   word-wrap: break-word;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: AnimationName 20s ease infinite;
+  width: 100%;
 }
 
 /* 공통요소 */
@@ -148,10 +153,6 @@ body::-webkit-scrollbar-track {
   height: 100vh;
   font-family: 'mom_to_daughter';
   color: #fff;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: AnimationName 40s ease infinite;
-  width: 100%;
 }
 
 @-webkit-keyframes AnimationName {
@@ -223,6 +224,8 @@ body::-webkit-scrollbar-track {
   position: relative;
   display: block;
   padding: 120px;
+  background-color: #fff;
+  z-index: -10;
 }
 
 .profile .inner {
@@ -416,6 +419,7 @@ body::-webkit-scrollbar-track {
 .skill {
   position: relative;
   display: block;
+  background-color: #fff;
 }
 
 .skill .inner {
@@ -704,7 +708,7 @@ body::-webkit-scrollbar-track {
   position: relative;
   display: block;
   padding: 100px 0;
-  /* background-color: #000; */
+  background-color: #fff;
 }
 
 .life .inner {
@@ -792,7 +796,6 @@ body::-webkit-scrollbar-track {
 }
 
 .sw-life .swiper-slide {
-
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -814,6 +817,18 @@ body::-webkit-scrollbar-track {
 
 /* contact */
 .contact{
-  height: 500px;
-  background-color: #f3f2f3;
+  padding-top: 50px;
+  height: 200px;
+  text-align: center;
+}
+
+/* footer */
+.footer{
+  color: #fff;
+  text-align: center;
+}
+.copy{
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
