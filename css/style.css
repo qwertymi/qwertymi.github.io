@@ -105,10 +105,8 @@ body::-webkit-scrollbar-track {
   right: 20px;
   top: 40%;
   transform: translateY(-50%);
-
-  z-index: 9999;
+  z-index: 999;
   text-align: right;
-  font-family: 'LeferiBase';
 }
 
 .gnb {
@@ -116,22 +114,44 @@ body::-webkit-scrollbar-track {
 }
 
 .gnb>li {
-  position: relative; 
+  position: relative;
   white-space: nowrap;
   font-size: 0;
   margin: 0px 10px;
 }
 
 .gnb>li>a {
-  display: block;
+  position: relative;
   line-height: 70px;
+  padding: 10px;
+  padding-right: 0;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
+  color: rgb(192, 192, 192);
+  z-index: 2;
+}
+
+.gnb>li>a:hover::after {
+  width: 95%;
+  background-color: rgba(255, 249, 160, 0.904);
+}
+
+.gnb>li>a::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 60%;
+  width: 0%;
+  height: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  z-index: -1;
 }
 
 .gnb>li>a:hover {
-  color: cornflowerblue;
+  color: #555;
+  font-weight: bold;
 }
 
 /* visual */
@@ -142,9 +162,15 @@ body::-webkit-scrollbar-track {
   padding: 50px;
   color: #fff;
   text-align: center;
+  z-index: 9999;
+
+  background: linear-gradient(-45deg, #681212, #94043b, #064b64, #047258);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
+  width: 100%;
 }
 
-.maintitle{
+.maintitle-top {
   display: block;
   width: 49%;
   position: absolute;
@@ -154,15 +180,91 @@ body::-webkit-scrollbar-track {
   letter-spacing: -1.8px;
   font-weight: 600;
   line-height: 88px;
+  z-index: 1;
 }
 
-.vs-img{
+
+.maintitle-top span {
+  width: 100%;
+  float: left;
+  color: #fff;
+
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+}
+
+
+.maintitle-top span {
+  /* animation-delay: 0.6s; */
+  -webkit-animation-fill-mode: forwards;
+}
+
+.maintitle-top span:first-child {
+  animation-delay: 0.4s;
+}
+
+.maintitle-top span:nth-child(2) {
+  animation-delay: .8s;
+}
+
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 00%);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+  }
+}
+
+.maintitle-bot {
+  display: block;
+  width: 49%;
+  position: absolute;
+  bottom: 5.8%;
+  right: 50px;
+  font-size: 70px;
+  text-align: right;
+  letter-spacing: -1.8px;
+  line-height: 88px;
+  z-index: 1;
+  font-weight: bold;
+  font-family: 'LeferiPoint';
+}
+
+.maintitle-bot span {
+  font-family: 'Leferibase';
+
+}
+
+.vs-img {
+  position: relative;
   margin: 200px;
   width: 1300px;
   height: 1200px;
   display: inline-block;
   background: url('../images/visual.jpg') no-repeat center;
   background-size: contain;
+}
+
+.vs-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-40%, -100%);
+  width: 120px;
+  height: 120px;
+  background: url('../images/logoh.svg') no-repeat center;
+  background-size: cover;
 }
 
 
@@ -394,7 +496,7 @@ body::-webkit-scrollbar-track {
   background-size: 0%;
 }
 
-.polygon-color-draw{
+.polygon-color-draw {
   animation-name: polygon;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
@@ -415,9 +517,7 @@ body::-webkit-scrollbar-track {
     background-size: 98%;
   }
 
-  100% {
-
-  }
+  100% {}
 }
 
 
@@ -739,18 +839,20 @@ body::-webkit-scrollbar-track {
   width: 900px;
   height: 600px;
 }
-.li-left{
+
+.li-left {
   float: left;
   width: 66.5%;
   height: 100%;
   margin-right: 1%;
 }
 
-.lifebox{
+.lifebox {
   position: relative;
   display: block;
 }
-.lifebox span{
+
+.lifebox span {
   position: absolute;
   display: block;
   width: 100%;
@@ -758,7 +860,8 @@ body::-webkit-scrollbar-track {
 
   transition: all 0.5s;
 }
-.lifebox p{
+
+.lifebox p {
   position: absolute;
   bottom: 15px;
   left: 15px;
@@ -767,19 +870,21 @@ body::-webkit-scrollbar-track {
   visibility: hidden;
 }
 
-.lb-1{
+.lb-1 {
   width: 100%;
   height: 49%;
   background: url('../images/life1.png') no-repeat center;
 }
-.lb-2{
+
+.lb-2 {
   float: left;
   width: 49%;
   height: 49%;
   margin-top: 2%;
   background: url('../images/life2.png') no-repeat center;
 }
-.lb-3{
+
+.lb-3 {
   float: left;
   width: 49%;
   height: 49%;
@@ -787,18 +892,20 @@ body::-webkit-scrollbar-track {
   margin-left: 2%;
   background: url('../images/life3.png') no-repeat center;
 }
-.lb-4{
+
+.lb-4 {
   float: right;
   width: 32%;
   height: 100%;
   background: url('../images/life4.png') no-repeat center;
 }
 
-.lifebox:hover p{
+.lifebox:hover p {
   visibility: visible;
 }
-.lifebox:hover span{
-    background-color: rgba(0, 0, 0, 0.6);
+
+.lifebox:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .sw-life .swiper-slide {
@@ -822,26 +929,30 @@ body::-webkit-scrollbar-track {
 }
 
 /* contact */
-.contact{
-  padding: 40px 0;
+.contact {
+  padding: 60px 0 40px 0;
   text-align: center;
 }
-.contact-title{
+
+.contact-title {
   display: block;
   color: #fff;
   font-size: 25px;
   margin-bottom: 20px;
 }
-.contact-list{
+
+.contact-list {
   display: inline-block;
   text-align: center;
 }
-.contact-list li{
+
+.contact-list li {
   position: relative;
   float: left;
   margin: 0 15px;
 }
-.contact-list li a{
+
+.contact-list li a {
   display: block;
   width: 45px;
   height: 45px;
@@ -850,7 +961,8 @@ body::-webkit-scrollbar-track {
   box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.2);
   transition: all 0.2s;
 }
-.contact-list li i{
+
+.contact-list li i {
   position: absolute;
   top: 48%;
   left: 51%;
@@ -859,20 +971,24 @@ body::-webkit-scrollbar-track {
   color: #fff;
   transition: all 0.2s;
 }
-.contact-list li a:hover i{
+
+.contact-list li a:hover i {
   color: #000;
 }
-.contact-list li a:hover{
+
+.contact-list li a:hover {
   border: 1px solid #fff;
   background-color: #fff;
 }
+
 /* footer */
-.footer{
+.footer {
   color: #fff;
   text-align: center;
   padding-bottom: 10px;
 }
-.copy{
+
+.copy {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: .5px;
