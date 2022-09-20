@@ -11,13 +11,6 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'mom_to_daughter';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/mom_to_daughter.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 * {
   margin: 0;
@@ -57,9 +50,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #681212, #94043b, #064b64, #047258);
   background-size: 400% 400%;
-  animation: AnimationName 20s ease infinite;
+  animation: AnimationName 10s ease infinite;
   width: 100%;
 }
 
@@ -109,26 +102,21 @@ body::-webkit-scrollbar-track {
 /* header */
 .header {
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.95);
+  right: 20px;
+  top: 40%;
+  transform: translateY(-50%);
+
   z-index: 9999;
   text-align: right;
-  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
   font-family: 'LeferiBase';
 }
 
 .gnb {
   position: relative;
-  display: inline-block;
-
 }
 
 .gnb>li {
-  position: relative;
-  display: inline-block;
+  position: relative; 
   white-space: nowrap;
   font-size: 0;
   margin: 0px 10px;
@@ -136,7 +124,7 @@ body::-webkit-scrollbar-track {
 
 .gnb>li>a {
   display: block;
-  line-height: 80px;
+  line-height: 70px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
@@ -150,10 +138,33 @@ body::-webkit-scrollbar-track {
 .visual {
   position: relative;
   display: block;
-  height: 100vh;
-  font-family: 'mom_to_daughter';
+  height: 100%;
+  padding: 50px;
   color: #fff;
+  text-align: center;
 }
+
+.maintitle{
+  display: block;
+  width: 49%;
+  position: absolute;
+  top: 5.8%;
+  font-size: 70px;
+  text-align: left;
+  letter-spacing: -1.8px;
+  font-weight: 600;
+  line-height: 88px;
+}
+
+.vs-img{
+  margin: 200px;
+  width: 1300px;
+  height: 1200px;
+  display: inline-block;
+  background: url('../images/visual.jpg') no-repeat center;
+  background-size: contain;
+}
+
 
 @-webkit-keyframes AnimationName {
   0% {
@@ -211,11 +222,6 @@ body::-webkit-scrollbar-track {
   }
 }
 
-.maintitle{
-  font-family: 'mom_to_daughter';
-  font-size: 50px;
-
-}
 
 
 
@@ -817,18 +823,57 @@ body::-webkit-scrollbar-track {
 
 /* contact */
 .contact{
-  padding-top: 50px;
-  height: 200px;
+  padding: 40px 0;
   text-align: center;
 }
-
+.contact-title{
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contact-list{
+  display: inline-block;
+  text-align: center;
+}
+.contact-list li{
+  position: relative;
+  float: left;
+  margin: 0 15px;
+}
+.contact-list li a{
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px outset #fff;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.2);
+  transition: all 0.2s;
+}
+.contact-list li i{
+  position: absolute;
+  top: 48%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.2s;
+}
+.contact-list li a:hover i{
+  color: #000;
+}
+.contact-list li a:hover{
+  border: 1px solid #fff;
+  background-color: #fff;
+}
 /* footer */
 .footer{
   color: #fff;
   text-align: center;
+  padding-bottom: 10px;
 }
 .copy{
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
 }

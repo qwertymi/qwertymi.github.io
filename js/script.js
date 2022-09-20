@@ -59,7 +59,7 @@ window.onload = function () {
         $('.polygon-color').addClass('polygon-color-draw');
       }
     },
-    offset: '40%'
+    offset: '70%'
   });
   
   AOS.init();
