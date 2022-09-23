@@ -194,18 +194,58 @@ window.onload = function () {
     },
     offset: "60%",
   });
+  new Waypoint({
+    element: $(".vision"),
+    handler: function (direction) {
+      focusRemove();
+      if (direction == "down") {
+        $(".vision-menu").addClass("menu-focus");
+      } else if (direction == "up") {
+        $(".life-menu").addClass("menu-focus");
+      }
+    },
+    offset: "50%",
+  });
 
   new Waypoint({
     element: $(".vision"),
     handler: function (direction) {
       if (direction == "down") {
-        $(".vision-box").addClass("bigEntrance");
-        $(".line").addClass('line-draw');
+        $(".line").addClass("line-draw");
       } else if (direction == "up") {
-        $(".vision-box").addClass("bigEntrance");
         $(".line").addClass("line-draw");
       }
     },
-    offset: "40%",
+    offset: "50%",
+  });
+
+  new Waypoint({
+    element: $(".vision"),
+    handler: function (direction) {
+      if (direction == "down") {
+        $(".later-1").css("opacity", 1);
+        $(".delay-0").addClass("bigEntrance");
+        setTimeout(() => {
+          $(".later-3").css("opacity", 1);
+          $(".delay-1").addClass("bigEntrance");
+          setTimeout(() => {
+            $(".later-5").css("opacity", 1);
+            $(".delay-2").addClass("bigEntrance");
+          }, 350);
+        }, 350);
+      } else if (direction == "up") {
+        $(".later-1").css("opacity", 1);
+        $(".delay-0").addClass("bigEntrance");
+        setTimeout(() => {
+          $(".later-3").css("opacity", 1);
+          $(".delay-1").addClass("bigEntrance");
+          setTimeout(() => {
+            $(".later-5").css("opacity", 1);
+            $(".delay-2").addClass("bigEntrance");
+          }, 350);
+        }, 350);
+      }
+    },
+    offset: "50%",
   });
 };

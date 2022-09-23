@@ -277,8 +277,8 @@ body::-webkit-scrollbar-track {
 
 .vs-img {
   position: relative;
-  margin: 200px;
-  width: 1100px;
+  margin: 250px;
+  width: 1300px;
   height: 1100px;
   display: inline-block;
   background: url("../images/visual.jpg") no-repeat center;
@@ -975,7 +975,7 @@ body::-webkit-scrollbar-track {
   margin-left: 150px;
 
   width: 0vw;
-  transition: width 2s;
+  transition: width 2.5s;
 }
 
 .line-draw {
@@ -987,6 +987,8 @@ body::-webkit-scrollbar-track {
   display: inline-block;
   font-family: "years";
   font-size: 22px;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .later strong {
@@ -1055,8 +1057,8 @@ body::-webkit-scrollbar-track {
   animation-name: bigEntrance;
   -webkit-animation-name: bigEntrance;
 
-  animation-duration: 1.6s;
-  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
 
   animation-timing-function: ease-out;
   -webkit-animation-timing-function: ease-out;
