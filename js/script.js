@@ -45,6 +45,38 @@ $(document).ready(function () {
 
 window.onload = function () {
   new Waypoint({
+    element: $(".profile"),
+    handler: function (direction) {
+      if (direction == "down") {
+        $(".vs-img-2").css("opacity", "1");
+        $(".vs-img-2").css("z-index", "2");
+        $(".vs-img-3").css("opacity", "0");
+      } else if (direction == "up") {
+        $(".vs-img").css("opacity", "1");
+        $(".vs-img-2").css("opacity", "0");
+        $(".vs-img-3").css("opacity", "0");
+      }
+    },
+    offset: "125%",
+  });
+  new Waypoint({
+    element: $(".profile"),
+    handler: function (direction) {
+      if (direction == "down") {
+        $(".vs-img").css("opacity", "0");
+        $(".vs-img-2").css("opacity", "1");
+        $(".vs-img-3").css("opacity", "1");
+        $(".vs-img-3").css("z-index", "3");
+      } else if (direction == "up") {
+        $(".vs-img-3").css("opacity", "0");
+        $(".vs-img-2").css("opacity", "1");
+        $(".vs-img").css("opacity", "1");
+      }
+    },
+    offset: "100%",
+  });
+
+  new Waypoint({
     element: $(".polygon-color"),
     handler: function (direction) {
       if (direction == "down") {
@@ -168,7 +200,7 @@ window.onload = function () {
         $(".profile-menu").addClass("menu-focus");
       }
     },
-    offset: "0%",
+    offset: "20%",
   });
   new Waypoint({
     element: $(".portfolio"),
