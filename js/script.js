@@ -57,7 +57,7 @@ window.onload = function () {
         $(".vs-img-3").css("opacity", "0");
       }
     },
-    offset: "125%",
+    offset: "135%",
   });
   new Waypoint({
     element: $(".profile"),

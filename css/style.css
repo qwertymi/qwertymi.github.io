@@ -44,6 +44,7 @@ img {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -57,7 +58,6 @@ body {
   font-size: 16px;
   word-wrap: break-word;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 
   background: linear-gradient(-45deg, #681212, #94043b, #064b64, #047258);
   background-size: 400% 400%;
@@ -188,11 +188,17 @@ body::-webkit-scrollbar-track {
   z-index: -1;
 }
 
+@media screen and (max-width: 1600px) {
+  .header {
+    display: none;
+  }
+}
+
 /* visual */
 .visual {
   position: relative;
   display: block;
-  height: 1350px;
+  padding-bottom: 12.5%;
   color: #fff;
   text-align: center;
   z-index: 9999;
@@ -206,9 +212,8 @@ body::-webkit-scrollbar-track {
 .logomi {
   display: block;
   width: 50px;
-  height: 80px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 1.5%;
 }
 
 .maintitle-top {
@@ -217,12 +222,12 @@ body::-webkit-scrollbar-track {
   max-width: 49%;
   position: absolute;
   top: 7%;
-  left: 50px;
-  font-size: 70px;
+  left: 2.5%;
+  font-size: 68px;
   text-align: left;
-  letter-spacing: -1.8px;
+  letter-spacing: -1.7px;
   font-weight: 500;
-  line-height: 88px;
+  line-height: 85px;
   z-index: 9;
 }
 
@@ -257,11 +262,11 @@ body::-webkit-scrollbar-track {
   max-width: 49%;
   position: absolute;
   bottom: 5.8%;
-  right: 50px;
-  font-size: 70px;
+  right: 2.5%;
+  font-size: 68px;
   text-align: right;
-  letter-spacing: -1.8px;
-  line-height: 88px;
+  letter-spacing: -1.7px;
+  line-height: 85px;
   z-index: 1;
   font-weight: bold;
   font-family: "LeferiPoint";
@@ -287,9 +292,10 @@ body::-webkit-scrollbar-track {
 }
 .imgbox {
   position: relative;
-  margin: 170px auto 250px auto;
-  width: 1450px;
-  height: 846px;
+  margin: 9% auto 0 auto;
+  /* width: 1450px; */
+  width: 79vw;
+  height: 900px;
 }
 .vs-img {
   opacity: 1;
@@ -299,7 +305,7 @@ body::-webkit-scrollbar-track {
   background: url("../images/vs_1.jpg") no-repeat center;
   background-size: cover;
 
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .vs-img-2 {
   opacity: 0;
@@ -310,7 +316,7 @@ body::-webkit-scrollbar-track {
   background: url("../images/vs_3.jpg") no-repeat center;
   background-size: cover;
 
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .vs-img-3 {
   opacity: 0;
@@ -321,7 +327,7 @@ body::-webkit-scrollbar-track {
   background: url("../images/vs_2.jpg") no-repeat center;
   background-size: cover;
 
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 @-webkit-keyframes AnimationName {
@@ -377,6 +383,151 @@ body::-webkit-scrollbar-track {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 1774px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 62px;
+    line-height: 74px;
+  }
+  .imgbox {
+    height: 85vh;
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 55px;
+    min-width: 60%;
+  }
+  .imgbox {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 1124px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 48px;
+    min-width: 55%;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 41px;
+    min-width: 50%;
+    line-height: 55px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .visual {
+    height: 100vh;
+  }
+  .imgbox {
+    margin: 6vh auto 0 auto;
+  }
+  .maintitle-top,
+  .maintitle-bot {
+    line-height: 50px;
+  }
+  .maintitle-top {
+    top: 8vh;
+  }
+  .maintitle-bot {
+    bottom: 3vh;
+  }
+}
+@media screen and (max-width: 985px) {
+  .maintitle-top,
+  .maintitle-bot {
+    min-width: 59%;
+  }
+  .logomi {
+    width: 45px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 37px;
+    min-width: 60%;
+    line-height: 45px;
+  }
+  .imgbox {
+    height: 75vh;
+    margin-top: 8vh;
+  }
+}
+@media screen and (max-width: 735px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 33px;
+    min-width: 60%;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 648px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 28px;
+    min-width: 55%;
+    line-height: 40px;
+  }
+  .logomi {
+    width: 43px;
+    padding-top: 2%;
+  }
+}
+@media screen and (max-width: 588px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 28px;
+    min-width: 64%;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 507px) {
+  .maintitle-top,
+  .maintitle-bot {
+    min-width: 70%;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 25px;
+    min-width: 65%;
+    line-height: 32px;
+  }
+  .logomi {
+    width: 40px;
+    padding-top: 2%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 22px;
+    min-width: 60%;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 401px) {
+  .maintitle-top,
+  .maintitle-bot {
+    min-width: 71%;
+  }
+}
+@media screen and (max-width: 339px) {
+  .maintitle-top,
+  .maintitle-bot {
+    font-size: 20px;
+    min-width: 65%;
   }
 }
 
