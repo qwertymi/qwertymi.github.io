@@ -1118,9 +1118,6 @@ body::-webkit-scrollbar-track {
   .progressbar-text {
     font-size: 12px !important;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-  }
 }
 
 /* portfolio */
@@ -1170,6 +1167,7 @@ body::-webkit-scrollbar-track {
 
 .sw-pf-imgwrap img {
   position: absolute;
+  width: 100%;
   left: 50%;
   bottom: 100%;
   transform: translate(-50%, 100%);
@@ -1337,6 +1335,60 @@ body::-webkit-scrollbar-track {
 .pf-listbox-focus i img {
   opacity: 0.5 !important;
   /* display: none; */
+}
+
+@media screen and (max-width: 1320px) {
+}
+@media screen and (max-width: 1260px) {
+  .portfolio .inner {
+    width: 97%;
+    /* margin-left: 2%; */
+    padding-left: 1.1%;
+  }
+
+  .pf-main,
+  .shadow,
+  .pf-list {
+    height: 44.44vw;
+  }
+  .pf-list > li {
+    width: 17.06vw;
+    height: 10.79vw;
+  }
+  .pf-listbox {
+    width: 51.98vw;
+  }
+  .sw-pf-img,
+  .pf-main,
+  .shadow {
+    width: 41.27vw;
+  }
+
+  .pf-main,
+  .shadow {
+    width: 40.8vw;
+  }
+
+  .pf-list > li > a i img {
+    width: 17.97vw;
+    height: 11.33vw;
+  }
+
+  .sw-pf-imgwrap:hover img {
+    bottom: 0;
+    transform: translate(-50%, 0);
+    filter: brightness(1);
+  }
+  .imgwrap-fix:hover img {
+    bottom: 100%;
+    transform: translate(-50%, 100%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .portfolio .title {
+    padding: 7vw 0 1vw 0 !important;
+  }
 }
 
 /* life */
