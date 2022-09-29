@@ -653,7 +653,7 @@ body::-webkit-scrollbar-track {
 .char-info li:nth-child(3) {
   position: relative;
   display: block;
-  background: url("../images/icon3.png") no-repeat center 10%;
+  background: url("../images/icon3.png") no-repeat center 18%;
   background-size: 49%;
 }
 
@@ -792,6 +792,14 @@ body::-webkit-scrollbar-track {
   }
 }
 @media screen and (max-width: 1000px) {
+  .introduce-txt {
+    font-size: 13px;
+    width: calc(100% - 270px);
+  }
+  .introduce img {
+    width: 240px;
+  }
+
   .introduce-bottom {
     margin-top: 9vw;
   }
@@ -802,10 +810,19 @@ body::-webkit-scrollbar-track {
   }
   .char-info li {
     float: none;
-    width: 53%;
-    background-position: left 70% !important;
+    width: 58%;
+    height: 60px;
     background-size: 9vw !important;
     margin: 20px 0;
+  }
+  .char-info li:nth-child(1) {
+    background-position: left 70% !important;
+  }
+  .char-info li:nth-child(2) {
+    background-position: left 80% !important;
+  }
+  .char-info li:nth-child(3) {
+    background-position: left 75% !important;
   }
   .char-info li p {
     text-align: left;
@@ -823,19 +840,144 @@ body::-webkit-scrollbar-track {
   }
 
   .char-info li p span {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 0;
   }
   .char-info li p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .polygon {
-    top: -5vw;
-    right: -5vw;
+    top: -4vw;
+    right: -7vw;
   }
   .polygon li {
     width: 38.94vw;
     height: 35.01vw;
+  }
+}
+@media screen and (max-width: 930px) {
+  .introduce img {
+    /* width: 220px; */
+  }
+  .introduce-txt ul {
+    width: 55vw;
+  }
+  .introduce-txt p {
+    white-space: normal;
+    width: 55vw;
+  }
+  .introduce-txt > p > br {
+    display: none;
+  }
+  .profile h2 {
+    font-size: 24px;
+    left: -74px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .introduce-txt p {
+    white-space: normal;
+    width: 50vw;
+  }
+  .introduce-txt ul {
+    width: 50vw;
+  }
+  .introduce-txt > p > br {
+    display: none;
+  }
+  .introduce-txt ul li small {
+    display: none;
+  }
+
+  .polygon {
+    top: -0.5vw;
+    right: -7vw;
+  }
+  .polygon li {
+    width: 38.94vw;
+    height: 35.01vw;
+  }
+}
+@media screen and (max-width: 730px) {
+  .introduce-txt p {
+    white-space: normal;
+    width: 45vw;
+  }
+  .introduce-txt ul {
+    width: 45vw;
+  }
+  .polygon {
+    top: 2vw;
+    right: -8vw;
+  }
+  .polygon li {
+    width: 284px;
+    height: 255px;
+  }
+}
+@media screen and (max-width: 728px) {
+  .introduce img {
+    width: 255px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .introduce img {
+    float: none;
+  }
+  .introduce-txt {
+    float: none;
+    width: 100%;
+    margin-top: 7vw;
+  }
+  .introduce-txt p {
+    width: 100%;
+  }
+
+  .polygon {
+    top: 3vw;
+    right: -88%;
+    transform: translateX(-100%);
+  }
+  .polygon li {
+    width: 61vw;
+    height: 53vw;
+  }
+
+  .introduce-bottom {
+    margin-top: 63vw;
+  }
+  .char-info li {
+    width: 83vw;
+    background-size: 16% !important;
+  }
+  .char-info li p {
+    padding-left: 16vw;
+  }
+  .introduce-bottom::after {
+    right: -50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .polygon {
+    left: 76vw;
+  }
+  .polygon li {
+    width: 305px;
+    height: 265px;
+  }
+  .introduce-bottom {
+    margin-top: 320px;
+  }
+  .char-info li {
+    background-size: 15vw !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .polygon {
+    left: 300px;
   }
 }
 
