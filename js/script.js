@@ -25,9 +25,12 @@ $(document).ready(function () {
       swAbout2.slideTo(index + 1);
     });
   });
+});
 
+window.onload = function () {
   let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: 2,
+    autoplay: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -35,15 +38,38 @@ $(document).ready(function () {
     grid: {
       rows: 2,
     },
-    spaceBetween: 40,
+    spaceBetween: 0,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-  });
-});
+    breakpoints: {
+      1050: {
+        slidesPerView: 5,
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 40,
+      },
 
-window.onload = function () {
+      800: {
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 0,
+      },
+
+      651: {
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 20,
+      },
+    },
+  });
+
   new Waypoint({
     element: $(".profile"),
     handler: function (direction) {

@@ -535,7 +535,7 @@ body::-webkit-scrollbar-track {
 .profile {
   position: relative;
   display: block;
-  padding: 6vw 0;
+  padding-top: 6vw;
   background-color: #fff;
 }
 
@@ -602,7 +602,7 @@ body::-webkit-scrollbar-track {
 .introduce-bottom {
   position: relative;
   display: block;
-  height: 300px;
+  height: 26vw;
   margin-top: 175px;
 }
 
@@ -786,6 +786,9 @@ body::-webkit-scrollbar-track {
   .introduce-txt ul li span {
     margin: 1.3vw 0 5px 0;
   }
+  .title {
+    font-size: 2.8vw !important;
+  }
   .profile h2 {
     font-size: 2.8vw;
     left: -11%;
@@ -802,6 +805,7 @@ body::-webkit-scrollbar-track {
 
   .introduce-bottom {
     margin-top: 9vw;
+    height: 300px;
   }
 
   .char-info {
@@ -870,6 +874,9 @@ body::-webkit-scrollbar-track {
   .introduce-txt > p > br {
     display: none;
   }
+  .title {
+    font-size: 24px !important;
+  }
   .profile h2 {
     font-size: 24px;
     left: -74px;
@@ -925,7 +932,9 @@ body::-webkit-scrollbar-track {
 @media screen and (max-width: 650px) {
   .introduce img {
     float: none;
+    z-index: 10;
   }
+
   .introduce-txt {
     float: none;
     width: 100%;
@@ -1000,7 +1009,7 @@ body::-webkit-scrollbar-track {
 }
 
 .mySwiper {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: 83%;
   height: 58%;
 }
@@ -1047,6 +1056,70 @@ body::-webkit-scrollbar-track {
 
 .swiper-button-next {
   right: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .skill h2 {
+    padding: 7vw 0 1vw 0;
+  }
+  .skill .inner {
+    height: 60vw;
+  }
+  .mySwiper .swiper-slide {
+    height: 12vw !important;
+    width: 12vw !important;
+  }
+  .mySwiper {
+    height: 35vw;
+  }
+  .progressbar-text {
+    font-size: 2vw !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mySwiper .swiper-slide {
+    height: 120px !important;
+    width: 120px !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .skill h2 {
+    padding: 8vw 0 2vw 0;
+  }
+  .mySwiper {
+    height: 36vw;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 54%;
+  }
+  .mySwiper .swiper-slide {
+    height: 15vw !important;
+    width: 15vw !important;
+  }
+  .progressbar-text {
+    font-size: 13px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mySwiper {
+    height: 30vw;
+  }
+  .mySwiper .swiper-slide {
+    margin: 0 !important;
+  }
+  .mySwiper .swiper-slide {
+    height: 17vw !important;
+    width: 17vw !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .progressbar-text {
+    font-size: 12px !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+  }
 }
 
 /* portfolio */
