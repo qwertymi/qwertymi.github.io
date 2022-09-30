@@ -29,20 +29,22 @@ $(document).ready(function () {
 
 window.onload = function () {
   let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    autoplay: true,
+    slidesPerView: 3,
+    grid: {
+      rows: 1,
+    },
+    spaceBetween: 0,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    grid: {
-      rows: 2,
-    },
-    spaceBetween: 0,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    observer: true,
+    observeParents: true,
+
     breakpoints: {
       1050: {
         slidesPerView: 5,
@@ -66,6 +68,14 @@ window.onload = function () {
           rows: 2,
         },
         spaceBetween: 20,
+      },
+
+      460: {
+        slidesPerView: 4,
+        grid: {
+          rows: 1,
+        },
+        spaceBetween: 0,
       },
     },
   });

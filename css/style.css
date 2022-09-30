@@ -1011,7 +1011,7 @@ body::-webkit-scrollbar-track {
 
 .mySwiper {
   /* margin-top: 30px; */
-  width: 83%;
+  width: 82vw;
   height: 58%;
 }
 
@@ -1102,21 +1102,40 @@ body::-webkit-scrollbar-track {
     font-size: 13px !important;
   }
 }
+
 @media screen and (max-width: 650px) {
+  .skill .inner {
+    height: 57vw;
+  }
   .mySwiper {
     height: 30vw;
+    width: 79.5vw;
   }
   .mySwiper .swiper-slide {
-    margin: 0 !important;
+    height: auto !important;
+    width: 18.1vw !important;
+    margin-left: 1.7vw !important;
   }
-  .mySwiper .swiper-slide {
-    height: 17vw !important;
-    width: 17vw !important;
+
+  .mySwiper .swiper-wrapper {
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 @media screen and (max-width: 550px) {
   .progressbar-text {
     font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 460px) {
+  .mySwiper .swiper-slide {
+    width: 23vw !important;
+  }
+  .mySwiper .swiper-slide {
+    margin-left: 2.7vw !important;
+  }
+  .mySwiper {
+    width: 77.5vw;
   }
 }
 
