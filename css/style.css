@@ -880,7 +880,7 @@ body::-webkit-scrollbar-track {
   }
   .profile h2 {
     font-size: 24px;
-    left: -74px;
+    left: -77px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1061,7 +1061,7 @@ body::-webkit-scrollbar-track {
 
 @media screen and (max-width: 1200px) {
   .skill h2 {
-    padding: 7vw 0 1vw 0;
+    padding: 10vw 0 1vw 0;
   }
   .skill .inner {
     height: 60vw;
@@ -1085,7 +1085,7 @@ body::-webkit-scrollbar-track {
 }
 @media screen and (max-width: 800px) {
   .skill h2 {
-    padding: 8vw 0 2vw 0;
+    padding: 10vw 0 2vw 0;
   }
   .mySwiper {
     height: 36vw;
@@ -1120,6 +1120,10 @@ body::-webkit-scrollbar-track {
   .mySwiper .swiper-wrapper {
     justify-content: flex-start;
     align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 61.5%;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1356,19 +1360,26 @@ body::-webkit-scrollbar-track {
   /* display: none; */
 }
 
-@media screen and (max-width: 1320px) {
-}
 @media screen and (max-width: 1260px) {
+  .portfolio {
+    padding-bottom: 10vw;
+  }
   .portfolio .inner {
     width: 97%;
     /* margin-left: 2%; */
     padding-left: 1.1%;
   }
 
-  .pf-main,
+  .sw-pf-img,
   .shadow,
   .pf-list {
     height: 44.44vw;
+  }
+  .pf-txtbox {
+    top: 46vw;
+  }
+  .pf-main {
+    height: 63vw;
   }
   .pf-list > li {
     width: 17.06vw;
@@ -1406,7 +1417,62 @@ body::-webkit-scrollbar-track {
 
 @media screen and (max-width: 1200px) {
   .portfolio .title {
-    padding: 7vw 0 1vw 0 !important;
+    padding: 10vw 0 1vw 0 !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .pf-name,
+  .pf-txtbox,
+  .pf-txtbox .material-symbols-outlined,
+  .pf-vuetag {
+    font-size: 2vw;
+  }
+  .pf-detailtxt {
+    font-size: 1.7vw;
+    letter-spacing: -0.7px;
+  }
+  .pf-a {
+    font-size: 1.7vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .subtitle {
+    margin-bottom: 8vw;
+  }
+  .sw-pf-img,
+  .shadow,
+  .pf-main {
+    width: 90vw;
+    height: 80vw;
+  }
+
+  .pf-main {
+    height: 116vw;
+    float: none;
+    margin: 0 auto;
+  }
+  .pf-listbox {
+    float: none;
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .pf-list {
+    width: 90vw;
+  }
+
+  .pf-txtbox {
+    top: 85vw;
+  }
+
+  .pf-list > li {
+    width: 22.2vw;
+    height: 14.4vw;
+  }
+
+  .pf-list > li > a i img {
+    width: 100%;
+    height: 100%;
   }
 }
 
