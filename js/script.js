@@ -126,6 +126,7 @@ window.onload = function () {
 
   AOS.init();
 
+
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
       color: "#777",

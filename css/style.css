@@ -581,6 +581,11 @@ body::-webkit-scrollbar-track {
   line-height: 1.8;
   white-space: nowrap;
 }
+.highlight {
+  display: inline !important;
+  font-weight: normal !important;
+  background-color: rgba(255, 249, 160, 0.7);
+}
 
 .introduce-txt ul {
   position: relative;
@@ -673,7 +678,8 @@ body::-webkit-scrollbar-track {
   text-align: center;
   margin-bottom: 10px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #333;
 }
 
 .chart {
@@ -1011,7 +1017,7 @@ body::-webkit-scrollbar-track {
 
 .mySwiper {
   /* margin-top: 30px; */
-  width: 82vw;
+  width: 80%;
   height: 58%;
 }
 
@@ -1071,6 +1077,7 @@ body::-webkit-scrollbar-track {
     width: 12vw !important;
   }
   .mySwiper {
+    width: 82vw;
     height: 35vw;
   }
   .progressbar-text {
@@ -1104,6 +1111,9 @@ body::-webkit-scrollbar-track {
 }
 
 @media screen and (max-width: 650px) {
+  .skill {
+    padding-bottom: 5vw;
+  }
   .skill .inner {
     height: 57vw;
   }
@@ -1218,6 +1228,8 @@ body::-webkit-scrollbar-track {
 }
 
 .pf-name {
+  color: #333;
+  font-weight: 600;
   font-size: 19px;
   vertical-align: top;
 }
@@ -1444,11 +1456,11 @@ body::-webkit-scrollbar-track {
   .shadow,
   .pf-main {
     width: 90vw;
-    height: 80vw;
+    height: 90vw;
   }
 
   .pf-main {
-    height: 116vw;
+    height: 115vw;
     float: none;
     margin: 0 auto;
   }
@@ -1462,7 +1474,7 @@ body::-webkit-scrollbar-track {
   }
 
   .pf-txtbox {
-    top: 85vw;
+    top: 93vw;
   }
 
   .pf-list > li {
@@ -1473,6 +1485,30 @@ body::-webkit-scrollbar-track {
   .pf-list > li > a i img {
     width: 100%;
     height: 100%;
+  }
+
+  .pf-name,
+  .pf-txtbox,
+  .pf-txtbox .material-symbols-outlined,
+  .pf-vuetag {
+    font-size: 13px;
+  }
+  .pf-detailtxt {
+    font-size: 11px;
+    letter-spacing: -0.7px;
+  }
+  .pf-a {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .pf-main {
+    height: 123vw;
+  }
+}
+@media screen and (max-width: 370px) {
+  .pf-main {
+    height: 126vw;
   }
 }
 
