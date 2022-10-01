@@ -185,7 +185,7 @@ body::-webkit-scrollbar-track {
   content: "";
 
   width: 95% !important;
-  background-color: rgba(255, 249, 160, 0.904);
+  background-color: #c9d1ff91;
   height: 50%;
   z-index: -1;
 }
@@ -298,6 +298,19 @@ body::-webkit-scrollbar-track {
   /* width: 1450px; */
   width: 79vw;
   height: 900px;
+}
+.copymail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-family: "LeferiBase";
+  font-size: 1vw;
+  cursor: pointer;
+  z-index: 99;
 }
 .vs-img {
   opacity: 1;
@@ -418,6 +431,12 @@ body::-webkit-scrollbar-track {
   }
 }
 @media screen and (max-width: 1060px) {
+  .copymail {
+    font-size: 17px;
+  }
+  .copymail span {
+    display: none;
+  }
   .maintitle-top,
   .maintitle-bot {
     font-size: 41px;
@@ -609,8 +628,8 @@ body::-webkit-scrollbar-track {
 .introduce-bottom {
   position: relative;
   display: block;
-  height: 26vw;
-  margin-top: 175px;
+  height: 23vw;
+  margin-top: 145px;
 }
 
 .introduce-bottom::after {
@@ -695,7 +714,7 @@ body::-webkit-scrollbar-track {
 .polygon {
   position: absolute;
   right: -10%;
-  top: -70px;
+  top: -100px;
   display: block;
   width: 100%;
   height: 100%;
@@ -1519,6 +1538,7 @@ body::-webkit-scrollbar-track {
 .life {
   position: relative;
   display: block;
+  padding-top: 100px;
   padding-bottom: 100px;
   background-color: #fff;
 }
@@ -1641,6 +1661,9 @@ body::-webkit-scrollbar-track {
 @media screen and (max-width: 1150px) {
 }
 @media screen and (max-width: 760px) {
+  .life {
+    padding-top: 0;
+  }
   .life-title {
     font-size: 24px;
     float: none;

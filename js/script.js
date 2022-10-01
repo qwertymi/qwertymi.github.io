@@ -25,6 +25,8 @@ $(document).ready(function () {
       swAbout2.slideTo(index + 1);
     });
   });
+
+
 });
 
 window.onload = function () {
