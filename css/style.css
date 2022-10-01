@@ -205,7 +205,8 @@ body::-webkit-scrollbar-track {
   text-align: center;
   z-index: 9999;
 
-  background: linear-gradient(-45deg, #681212, #94043b, #064b64, #047258);
+  /* background: linear-gradient(-45deg, #681212, #94043b, #064b64, #047258); */
+  background: linear-gradient(-45deg, #5e0202, #610024, #004964, #00382b);
   background-size: 400% 400%;
   animation: AnimationName 10s ease infinite;
   width: 100%;
@@ -1067,7 +1068,8 @@ body::-webkit-scrollbar-track {
 
 @media screen and (max-width: 1200px) {
   .skill h2 {
-    padding: 10vw 0 1vw 0;
+    padding: 12vw 0 1vw 0;
+    padding-top: min(60px) !important;
   }
   .skill .inner {
     height: 60vw;
@@ -1429,7 +1431,8 @@ body::-webkit-scrollbar-track {
 
 @media screen and (max-width: 1200px) {
   .portfolio .title {
-    padding: 10vw 0 1vw 0 !important;
+    padding: 12vw 0 1vw 0 !important;
+    padding-top: min(60px) !important;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1516,7 +1519,7 @@ body::-webkit-scrollbar-track {
 .life {
   position: relative;
   display: block;
-  padding: 100px 0;
+  padding-bottom: 100px;
   background-color: #fff;
 }
 
@@ -1632,30 +1635,52 @@ body::-webkit-scrollbar-track {
   }
   .lifebox p {
     font-size: 1.25vw;
+    font-size: min(12px);
   }
 }
 @media screen and (max-width: 1150px) {
-  .lifebox p {
-    font-size: 10px;
-  }
 }
 @media screen and (max-width: 760px) {
+  .life-title {
+    font-size: 24px;
+    float: none;
+    line-height: normal;
+    padding: 12vw 0 4vw 0;
+    padding-top: min(60px);
+  }
+  .life-content {
+    float: none;
+    width: 95.5vw;
+    height: 70vw;
+  }
+
   .lifebox p {
     visibility: visible;
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 9px 5px 5px 5px;
+  }
+  .lifebox p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .lifebox p small {
+    display: none;
   }
 }
 
 /* vision */
 .vision {
+  position: relative;
   background-color: #f3f2f3;
   padding-bottom: 100px;
 }
 
 .vision .title {
+  position: relative;
   float: left;
   display: block;
 }
@@ -1683,12 +1708,22 @@ body::-webkit-scrollbar-track {
 }
 
 .line-draw {
-  width: 77vw;
+  width: 73vw;
+}
+
+.later-wrap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .later {
   cursor: pointer;
   display: inline-block;
+  text-align: center;
+  width: 130px;
+  height: 50px;
   font-family: "years";
   font-size: 22px;
   opacity: 0;
@@ -1702,17 +1737,17 @@ body::-webkit-scrollbar-track {
 
 .later-1 {
   position: absolute;
-  left: 20%;
+  left: 21%;
 }
 
 .later-3 {
   position: absolute;
-  left: 50%;
+  left: 51%;
 }
 
 .later-5 {
   position: absolute;
-  left: 80%;
+  left: 82%;
 }
 
 .later-1::after {
@@ -1730,29 +1765,28 @@ body::-webkit-scrollbar-track {
   top: -30px;
   left: 40px;
   display: block;
+  width: 50px;
   font-size: 20px;
   color: #ff3773;
 }
 
 .vision-bottom {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   margin-top: 70px;
-  margin-left: 150px;
+  padding-left: 150px;
 }
 
 .vision-box {
   vertical-align: top;
-  display: inline-block;
-  width: 25%;
-  /* height: 200px; */
-  line-height: 27px;
-  /* border: 1px solid #fff; */
+  width: 31%;
+  line-height: 30px;
   background-color: rgba(255, 255, 255, 0.432);
   border-radius: 20px;
-  margin-right: 4.5%;
+  /* margin-right: 4.5%; */
   padding: 30px;
   visibility: hidden;
 }
@@ -1798,6 +1832,169 @@ body::-webkit-scrollbar-track {
   100% {
     transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .vision .inner {
+    width: 97%;
+  }
+  .line-draw {
+    width: 90%;
+  }
+  .vision-box {
+    font-size: 1.24vw;
+    padding: 2vw 2.1vw;
+    line-height: 2.3vw;
+  }
+  .vision-bottom {
+    margin-top: 5vw;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .vision-bottom {
+    width: 96vw;
+  }
+  .vision-box {
+    font-size: 13px;
+  }
+
+  .later {
+    font-size: 1.8vw;
+  }
+  .later strong {
+    font-size: 3vw;
+  }
+  .later-1 {
+    left: 21.5vw;
+  }
+  .later-3 {
+    left: 49.5vw;
+  }
+  .later-5 {
+    left: 77.5vw;
+  }
+}
+@media screen and (max-width: 970px) {
+  .vision-box {
+    word-break: keep-all;
+  }
+}
+@media screen and (max-width: 910px) {
+  .vision-box {
+    font-size: 12px;
+    word-break: break-all;
+  }
+}
+@media screen and (max-width: 760px) {
+  .vision .title {
+    font-size: 24px;
+    float: none;
+    line-height: normal;
+    padding: 12vw 0 4vw 0;
+    padding-top: min(60px);
+  }
+  .road {
+    padding-top: 4vw;
+  }
+  .line,
+  .vision-bottom {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .line-draw {
+    width: 100vw;
+  }
+  .later {
+    position: relative;
+    display: inline-block;
+    width: calc(98% / 3);
+    font-size: 17px;
+    left: auto !important;
+  }
+  .later strong {
+    font-size: 26px;
+  }
+  .later::after {
+    left: 13vw;
+  }
+  /* .later-1 {
+    left: 6.5%;
+  }
+  .later-3 {
+    left: 41.5%;
+  } */
+  .later-5 {
+    padding-left: 6vw;
+  }
+  .later-5::after {
+    padding-right: 2.2vw;
+  }
+  .vision-bottom {
+    margin-top: 0;
+  }
+
+  .vision-box {
+    width: 31%;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .vision-box {
+    width: 32%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .line {
+    display: none;
+  }
+  .vision-box {
+    width: 67vw;
+    height: 12.5vh;
+
+    display: flex;
+    align-items: center;
+  }
+  .vision-bottom {
+    height: 40vh;
+    width: 95vw;
+    flex-direction: column;
+    align-items: flex-end;
+
+    /* flex-direction: row; */
+  }
+  .later-wrap {
+    position: absolute;
+    top: 10vh;
+    right: 1.5vw;
+  }
+  .later {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 13.3vh;
+    font-size: 3.5vw;
+  }
+  .later::after {
+    /* left: 40px; */
+    width: auto;
+    text-align: center;
+  }
+  .later-5 {
+    padding-left: 0vw;
+  }
+  .later-5::after {
+    padding-right: 0vw;
+  }
+}
+@media screen and (max-width: 415px) {
+  .later-wrap {
+    right: 2.5vw;
   }
 }
 

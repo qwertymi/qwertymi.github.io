@@ -30,6 +30,7 @@ $(document).ready(function () {
 window.onload = function () {
   let swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
+    slidesPerGroup: 3,
     grid: {
       rows: 1,
     },
@@ -125,7 +126,6 @@ window.onload = function () {
   });
 
   AOS.init();
-
 
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
