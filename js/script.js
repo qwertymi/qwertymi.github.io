@@ -25,8 +25,6 @@ $(document).ready(function () {
       swAbout2.slideTo(index + 1);
     });
   });
-
-
 });
 
 window.onload = function () {
@@ -318,5 +316,22 @@ window.onload = function () {
       }
     },
     offset: "50%",
+  });
+
+  let wW = window.innerWidth;
+  let pfListbox = $(".pf-listbox");
+  if (wW <= 650) {
+    pfListbox.attr("data-aos-offset", 0);
+  } else {
+    pfListbox.attr("data-aos-offset", 350);
+  }
+
+  $(window).resize(function () {
+    wW = window.innerWidth;
+    if (wW <= 650) {
+      pfListbox.attr("data-aos-offset", 0);
+    } else {
+      pfListbox.attr("data-aos-offset", 350);
+    }
   });
 };
