@@ -299,11 +299,17 @@ body::-webkit-scrollbar-track {
   width: 79vw;
   height: 900px;
 }
-.copymail {
+.vs-icon {
   position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%);
+  display: block;
+  text-align: right;
+}
+.copymail {
+  position: relative;
+  display: block;
   background-color: transparent;
   border: 0;
   color: #fff;
@@ -431,6 +437,10 @@ body::-webkit-scrollbar-track {
   }
 }
 @media screen and (max-width: 1060px) {
+  .vs-icon li {
+    display: inline-block;
+    margin: 0 5px;
+  }
   .copymail {
     font-size: 17px;
   }
