@@ -1,539 +1,812 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link
+      rel="icon"
+      href="images/favicon1.png"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="shortcut icon" href="images/favicon1.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon" />
+    <title>QwertyMI포트폴리오</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="icon" href="images/favicon1.png" type="image/x-icon" sizes="16x16">
-  <link rel="shortcut icon" href="images/favicon1.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon1.png" type="image/x-icon">
-  <title>QwertyMI포트폴리오</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta
+      name="description"
+      content="웹 퍼블리셔 & FE 개발자 김혜미 포트폴리오입니다."
+    />
+    <meta
+      name="keywords"
+      content="김혜미, 포트폴리오, 웹퍼블리싱, 웹퍼블리셔, FE, 프론트엔드"
+    />
+    <meta name="author" content="" />
+    <meta property="og:title" content="김혜미 포트폴리오" />
+    <meta property="og:site_name" content="QwertyMI포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qwertymi.github.io/" />
+    <meta property="og:image" content="images/metaimg.png" />
+    <meta
+      property="og:description"
+      content="웹 퍼블리셔 & FE 개발자 김혜미 포트폴리오입니다."
+    />
 
-  <meta name="description" content="웹 퍼블리셔 & FE 개발자 김혜미 포트폴리오입니다." />
-  <meta name="keywords" content="김혜미, 포트폴리오, 웹퍼블리싱, 웹퍼블리셔, FE, 프론트엔드" />
-  <meta name="author" content="" />
-  <meta property="og:title" content="김혜미 포트폴리오">
-  <meta property="og:site_name" content="QwertyMI포트폴리오" />
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://qwertymi.github.io/">
-  <meta property="og:image" content="images/metaimg.png">
-  <meta property="og:description" content="웹 퍼블리셔 & FE 개발자 김혜미 포트폴리오입니다." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+      integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
-    integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-  <!--[if lt IE 9]> 
-    <script src="js/html5shiv.js"></script>
-  <![endif]-->
-  <script src="js/prefixfree.min.js"></script>
-  <script src="js/respond.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper.min.css" />
+    <script src="js/swiper/swiper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <link rel="stylesheet" href="js/swiper/swiper.min.css">
-  <script src="js/swiper/swiper.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <link href="js/aos/aos.css" rel="stylesheet" />
+    <script src="js/aos/aos.js"></script>
 
+    <!-- waypoints -->
+    <script src="js/jquery.waypoints.js"></script>
 
-  <!-- aos -->
-  <link href="js/aos/aos.css" rel="stylesheet">
-  <script src="js/aos/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- waypoints -->
-  <script src="js/jquery.waypoints.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
-    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- fullpage -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Progressbar 관련 -->
+    <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <!-- fullpage -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
 
-  <!-- Progressbar 관련 -->
-  <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="inner">
+          <ul class="gnb">
+            <li><a href="#visual" class="visual-menu">home</a></li>
+            <li><a href="#profile" class="profile-menu">profile</a></li>
+            <li><a href="#portfolio" class="portfolio-menu">portfolio</a></li>
+            <li><a href="#life" class="life-menu">life</a></li>
+            <li><a href="#vision" class="vision-menu">vision</a></li>
+          </ul>
+        </div>
+      </header>
 
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
-</head>
+      <section class="visual" id="visual">
+        <img class="logomi" src="images/logoh.svg" width="50" alt="" />
+        <h1 class="maintitle-top">
+          <span>I'm a Front-End Developer who working on learning.</span>
+          <span>I will work hard every day to show you how i grow : )</span>
+        </h1>
+        <div class="imgbox">
+          <ul class="vs-icon">
+            <li>
+              <a
+                class="copymail"
+                href="images/Qwertymi포트폴리오.pdf"
+                target="_blank"
+                ><i class="fas fa-file-download"></i>
+                <span>View 'MI' Portfolio.pdf</span></a
+              >
+            </li>
+            <li>
+              <a class="copymail" href="mailto:kimhp1216@naver.com"
+                ><i class="fas fa-envelope"></i>
+                <span>kimhp1216@naver.com</span></a
+              >
+            </li>
+          </ul>
+          <div class="vs-img"></div>
+          <div class="vs-img-2"></div>
+          <div class="vs-img-3"></div>
+        </div>
+        <h1 class="maintitle-bot">
+          <span>I CAN</span>
+          <span>Web Publishing,<br />
+            Front-end, Design,<br />
+            video editing, Drawing<br />
+          </span>
+        </h1>
+      </section>
 
-<body>
-  <div class="wrap">
-    <header class="header">
-      <div class="inner">
-        <ul class="gnb">
-          <li><a href="#visual" class="visual-menu">home</a></li>
-          <li><a href="#profile" class="profile-menu">profile</a></li>
-          <li><a href="#portfolio" class="portfolio-menu">portfolio</a></li>
-          <li><a href="#life" class="life-menu">life</a></li>
-          <li><a href="#vision" class="vision-menu">vision</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+      <section class="profile" id="profile">
+        <div class="inner">
+          <h2>ABOUT ME</h2>
+          <div class="introduce clearfix">
+            <img src="/images/hm.jpg" alt="프로필사진" />
+            <div
+              class="introduce-txt"
+              data-aos="fade-right"
+              data-aos-offset="100"
+              data-aos-delay="100"
+              data-aos-duration="800"
+            >
+              <p>
+                ✨HelloWorld, 안녕하세요!<br />
+                도전을 두려워하지 않으며
+                <span class="highlight">끊임없이 배우는 사람 김혜미</span
+                >입니다:D<br />
 
-    <section class="visual" id="visual">
-      <img class="logomi" src="images/logoh.svg" width="50" alt="">
-      <h1 class="maintitle-top">
-        <span>I'm a Front-End Developer
-          who working on learning.</span>
-        <span>I will work hard every day to show you how i grow : )<span></span>
-      </h1>
-      <div class="imgbox">
-        <ul class="vs-icon">
-          <li>
-            <a class="copymail" href="images/Qwertymi포트폴리오.pdf" target="_blank" ><i class="fas fa-file-download"></i>
-            <span>View 'MI' Portfolio.pdf</span></a>
-          </li>
-          <li>  
-            <a class="copymail" href="mailto:kimhp1216@naver.com"><i class="fas fa-envelope"></i>
-              <span>kimhp1216@naver.com</span></a>
-          </li>
-        </ul>
-        <div class="vs-img"></div>
-        <div class="vs-img-2"></div>
-        <div class="vs-img-3"></div>
-      </div>
-      <h1 class="maintitle-bot">
-        <span>I CAN</span><br>
-        Web Publishing,<br>
-        Front-end, Design,<br>
-        video editing, Drawing<br>
+                세상에는 많은 퍼블리셔가 있고, 퍼블리싱은 결국 누구나 할 수
+                있다고 생각합니다.<br />
+                저는 피드백을 유연히 받아들이고, 클라이언트와 모두가
+                <span class="highlight">만족하는 결과물을 내는 퍼블리셔</span>가
+                꿈이며,<br />
+                나아가 <span class="highlight">프론트엔드 개발자</span>가 되기
+                위해 오늘도 열심히 헤엄치는 중입니다!🏊🏻‍♀️
+              </p>
+              <ul>
+                <li
+                  data-aos="fade-down"
+                  data-aos-offset="200"
+                  data-aos-delay="300"
+                  data-aos-duration="400"
+                >
+                  <span>education</span>
+                  2022 | 그린컴퓨터아트학원
+                  <span class="highlight"
+                    >'<small>스마트혼합-뷰 활용</small> FE 개발자
+                    양성과정'</span
+                  >
+                  수료<br />
+                  2020 | 대원대학교 멀티미디어학과 졸업
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="500"
+                  data-aos-duration="300"
+                >
+                  <span>experience</span>
+                  2021 | ㈜엑스엠 인하우스 디자이너
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="600"
+                  data-aos-duration="500"
+                >
+                  <span>CERTIFICATE</span>
+                  2019 | 컴퓨터그래픽스운용기능사
+                </li>
+              </ul>
+            </div>
+          </div>
 
-      </h1>
-    </section>
+          <div class="chart">
+            <ul class="polygon">
+              <li class="polygon-base"></li>
+              <li class="polygon-color"></li>
+            </ul>
+          </div>
 
-    <section class="profile" id="profile">
-      <div class="inner">
-        <h2>ABOUT ME</h2>
-        <div class="introduce clearfix">
-          <img src="/images/hm.jpg" alt="프로필사진">
-          <div class="introduce-txt" data-aos="fade-right" data-aos-offset="100" data-aos-delay="100"
-            data-aos-duration="800">
-            <p>
-              ✨HelloWorld, 안녕하세요!<br>
-              도전을 두려워하지 않으며 <span class="highlight">끊임없이 배우는 사람 김혜미</span>입니다:D<br>
-
-              세상에는 많은 퍼블리셔가 있고, 퍼블리싱은 결국 누구나 할 수 있다고 생각합니다.<br>
-              저는 피드백을 유연히 받아들이고, 클라이언트와 모두가 <span class="highlight">만족하는 결과물을 내는 퍼블리셔</span>가 꿈이며,<br>
-              나아가 <span class="highlight">프론트엔드 개발자</span>가 되기 위해 오늘도 열심히 헤엄치는 중입니다!🏊🏻‍♀️
-            </p>
-            <ul>
-              <li data-aos="fade-down" data-aos-offset="200" data-aos-delay="300" data-aos-duration="400">
-                <span>education</span>
-                2022 | 그린컴퓨터아트학원 <span class="highlight">'<small>스마트혼합-뷰 활용</small> FE 개발자 양성과정'</span> 수료<br>
-                2020 | 대원대학교 멀티미디어학과 졸업
+          <div class="introduce-bottom">
+            <ul class="char-info clearfix">
+              <li data-aos="fade-right" data-aos-offset="300">
+                <p>
+                  <span>융통성</span>
+                  피드백을 주고받는 것을 좋아하며,<br />
+                  상황에 알맞게 사고방식을<br />
+                  유연하게 전환할 수 있습니다.
+                </p>
               </li>
-              <li data-aos="fade-down" data-aos-delay="500" data-aos-duration="300">
-                <span>experience</span>
-                2021 | ㈜엑스엠 인하우스 디자이너
+              <li
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-delay="200"
+              >
+                <p>
+                  <span>팀워크</span>
+                  개인보다 다른 사람과 함께 할 때,<br />
+                  보다 적극적인 태도로 임하고<br />
+                  더 나은 결과물을 만들어 냅니다.
+                </p>
               </li>
-              <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="500">
-                <span>CERTIFICATE</span>
-                2019 | 컴퓨터그래픽스운용기능사
+              <li
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-delay="400"
+              >
+                <p>
+                  <span>도전의식</span>
+                  실패를 두려워하지 않고,<br />
+                  새로운 경험을 하는 것이<br />
+                  즐거움이자 삶의 원동력입니다.
+                </p>
               </li>
             </ul>
           </div>
         </div>
+      </section>
 
-        <div class="chart">
-          <ul class="polygon">
-            <li class="polygon-base"></li>
-            <li class="polygon-color"></li>
-          </ul>
-        </div>
+      <section class="skill">
+        <div class="inner">
+          <h2 class="title">Skill&Tool</h2>
 
-        <div class="introduce-bottom">
-          <ul class="char-info clearfix">
-            <li data-aos="fade-right" data-aos-offset="300">
-              <p>
-                <span>융통성</span>
-                피드백을 주고받는 것을 좋아하며,<br>
-                상황에 알맞게 사고방식을<br>
-                유연하게 전환할 수 있습니다.
-              </p>
-            </li>
-            <li data-aos="fade-right" data-aos-offset="300" data-aos-delay="200">
-              <p>
-                <span>팀워크</span>
-                개인보다 다른 사람과 함께 할 때,<br>
-                보다 적극적인 태도로 임하고<br>
-                더 나은 결과물을 만들어 냅니다.
-              </p>
-            </li>
-            <li data-aos="fade-right" data-aos-offset="300" data-aos-delay="400">
-              <p>
-                <span>도전의식</span>
-                실패를 두려워하지 않고,<br>
-                새로운 경험을 하는 것이<br>
-                즐거움이자 삶의 원동력입니다.
-              </p>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="skill">
-      <div class="inner">
-        <h2 class="title">Skill&Tool</h2>
-
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" id="html"></div>
-            <div class="swiper-slide" id="js"></div>
-            <div class="swiper-slide" id="css"></div>
-            <div class="swiper-slide" id="jquery"></div>
-            <div class="swiper-slide" id="scss"></div>
-            <div class="swiper-slide" id="vue"></div>
-            <div class="swiper-slide" id="figma"></div>
-            <div class="swiper-slide" id="github"></div>
-            <div class="swiper-slide" id="photoshop"></div>
-            <div class="swiper-slide" id="illustrator"></div>
-            <div class="swiper-slide" id="afec"></div>
-            <div class="swiper-slide" id="premiere"></div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="html"></div>
+              <div class="swiper-slide" id="js"></div>
+              <div class="swiper-slide" id="css"></div>
+              <div class="swiper-slide" id="jquery"></div>
+              <div class="swiper-slide" id="scss"></div>
+              <div class="swiper-slide" id="vue"></div>
+              <div class="swiper-slide" id="figma"></div>
+              <div class="swiper-slide" id="github"></div>
+              <div class="swiper-slide" id="photoshop"></div>
+              <div class="swiper-slide" id="illustrator"></div>
+              <div class="swiper-slide" id="afec"></div>
+              <div class="swiper-slide" id="premiere"></div>
+            </div>
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      </section>
 
-      </div>
-    </section>
+      <section class="portfolio" id="portfolio">
+        <div class="inner">
+          <h2 class="title" data-aos="fade-down" data-aos-duration="500">
+            PORTFOLIO
+          </h2>
 
-    <section class="portfolio" id="portfolio">
-      <div class="inner">
+          <div class="portfolio-wrap clearfix">
+            <span class="subtitle" data-aos="fade-down" data-aos-duration="500"
+              >Publishing Clone Coding</span
+            >
 
-        <h2 class="title" data-aos="fade-down" data-aos-duration="500">PORTFOLIO</h2>
-
-        <div class="portfolio-wrap clearfix">
-          <span class="subtitle" data-aos="fade-down" data-aos-duration="500">Publishing Clone Coding</span>
-
-          <div class="pf-main" data-aos="fade-left" data-aos-delay="450" data-aos-duration="500">
-            <div class="shadow"></div>
-            <div class="swiper-container sw-pf">
-              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main01.png" alt="">
-                      </i>
-                    </a>
+            <div
+              class="pf-main"
+              data-aos="fade-left"
+              data-aos-delay="450"
+              data-aos-duration="500"
+            >
+              <div class="shadow"></div>
+              <div class="swiper-container sw-pf">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/richwood/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main01.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 풍림무약주식회사 </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/richwood/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/richwood"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://richwood.net/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                    </p>
                   </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      풍림무약주식회사
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/richwood/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/richwood" target="_blank" class="pf-a">Git</a>
-                    <a href="https://richwood.net/" target="_blank" class="pf-a">Origin</a>
-                  </p>
-                </div>
 
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/korail/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main03.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      코레일
-                    </span>
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/korail/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main03.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 코레일 </span>
 
-                    <!-- <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span> -->
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    Github를 이용한 협업 실습을 위해 스터디로 진행한 클론코딩입니다.
-                    <br>
-                    <a href="https://qwertymi.github.io/korail/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/korail" target="_blank" class="pf-a">Git</a>
-                    <a href="https://info.korail.com/info/index.do/" target="_blank" class="pf-a">Origin</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/jungyuckack/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main02.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      정육각
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/jungyuckack/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/jungyuckack" target="_blank" class="pf-a">Git</a>
-                    <a href="https://www.jeongyookgak.com/index" target="_blank" class="pf-a">Origin</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/K-water/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main04.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      K-water
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/K-water/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/K-water" target="_blank" class="pf-a">Git</a>
-                    <a href="https://www.kwater.or.kr/" target="_blank" class="pf-a">Origin</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/noelohills/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main05.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      노엘로힐스
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br />
-                    <a href="https://qwertymi.github.io/noelohills/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/noelohills" target="_blank" class="pf-a">Git</a>
-                    <a href="https://noelohills.com/" target="_blank" class="pf-a">Origin</a>
-                    <br />
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="https://qwertymi.github.io/noelo-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/vuenoelo" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/geojeyouth/" target="_blank">
-                      <i class="sw-pf-imgwrap imgwrap-fix">
-                        <img src="images/main06.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      거제청년센터 | 이룸
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/geojeyouth/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/geojeyouth" target="_blank" class="pf-a">Git</a>
-                    <a href="https://geojeyouth.com/web/" target="_blank" class="pf-a">Origin</a> <br />
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="https://qwertymi.github.io/geoje-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/vue-geoje" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/masigray/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main07.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      마시그래이
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/masigray/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/masigray" target="_blank" class="pf-a">Git</a>
-                    <a href="https://www.masigray.com" target="_blank" class="pf-a">Origin</a>
-                    <br />
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="https://qwertymi.github.io/masi-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/vuemasi" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/stxconst/" target="_blank">
-                      <i class="sw-pf-imgwrap">
-                        <img src="images/main08.png" alt="">
-                      </i>
-                    </a>
-                  </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      STX건설
-                    </span>
-                    <!-- <span class="material-symbols-outlined">
+                      <!-- <span class="material-symbols-outlined">
                       phone_iphone
                     </span> -->
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <a href="https://qwertymi.github.io/stxconst/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/stxconst" target="_blank" class="pf-a">Git</a>
-                    <a href="http://www.stxconst.co.kr/" target="_blank" class="pf-a">Origin</a>
-                    <br />
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="https://qwertymi.github.io/stx-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/vuestx" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="https://qwertymi.github.io/ghibli-vuepage/" target="_blank">
-                      <i class="sw-pf-imgwrap imgwrap-fix">
-                        <img src="images/main09.png" alt="">
-                      </i>
-                    </a>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      Github를 이용한 협업 실습을 위해 스터디로 진행한
+                      클론코딩입니다.
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/korail/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/korail"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://info.korail.com/info/index.do/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                    </p>
                   </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      스튜디오 지브리 :: MOVIE
-                    </span>
-                    <span class="material-symbols-outlined">
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/jungyuckack/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main02.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 정육각 </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/jungyuckack/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/jungyuckack"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://www.jeongyookgak.com/index"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/K-water/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main04.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> K-water </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/K-water/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/K-water"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://www.kwater.or.kr/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/noelohills/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main05.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 노엘로힐스 </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/noelohills/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/noelohills"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://noelohills.com/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/noelo-vuepage/"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vuenoelo"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/geojeyouth/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap imgwrap-fix">
+                          <img src="images/main06.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 거제청년센터 | 이룸 </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/geojeyouth/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/geojeyouth"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://geojeyouth.com/web/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/geoje-vuepage/"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vue-geoje"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/masigray/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main07.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 마시그래이 </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/masigray/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/masigray"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="https://www.masigray.com"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/masi-vuepage/"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vuemasi"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/stxconst/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap">
+                          <img src="images/main08.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> STX건설 </span>
+                      <!-- <span class="material-symbols-outlined">
                       phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <span class="pf-detailtxt">
-                      스튜디오 지브리API를 Vue.js로 작업한 지브리 영화 소개 프로젝트입니다.
-                    </span>
-                    <br>
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="https://qwertymi.github.io/ghibli-vuepage/" target="_blank" class="pf-a vue-a">Work</a>
-                    <a href="https://github.com/qwertymi/vue-ghibli" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="http://kimhyemi.dothome.co.kr/page-miniblog/" target="_blank">
-                      <i class="sw-pf-imgwrap imgwrap-fix">
-                        <img src="images/main10.png" alt="">
-                      </i>
-                    </a>
+                    </span> -->
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/stxconst/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/stxconst"
+                        target="_blank"
+                        class="pf-a"
+                        >Git</a
+                      >
+                      <a
+                        href="http://www.stxconst.co.kr/"
+                        target="_blank"
+                        class="pf-a"
+                        >Origin</a
+                      >
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/stx-vuepage/"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vuestx"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
                   </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
-                      TODO List
-                    </span>
-                    <span class="material-symbols-outlined">
-                      phone_iphone
-                    </span>
-                    <span class="material-symbols-outlined">
-                      desktop_windows
-                    </span>
-                    <br>
-                    <span class="pf-detailtxt">
-                      데이터베이스를 연동하여 Vue.js로 작업한 Todo list 프로젝트입니다.
-                    </span>
-                    <br>
-                    <span class="pf-vuetag">Vue.js</span>
-                    <br>
-                    <a href="http://kimhyemi.dothome.co.kr/page-miniblog/" target="_blank" class="pf-a">Work</a>
-                    <a href="https://github.com/qwertymi/vue_miniblog" target="_blank" class="pf-a vue-a">Git</a>
-                  </p>
-                </div>
 
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="#" target="_blank">
-                      <i class="sw-pf-imgwrap imgwrap-fix">
-                        <img src="images/main_ing.png" alt="">
-                      </i>
-                    </a>
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="https://qwertymi.github.io/ghibli-vuepage/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap imgwrap-fix">
+                          <img src="images/main09.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> 스튜디오 지브리 :: MOVIE </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <span class="pf-detailtxt">
+                        스튜디오 지브리API를 Vue.js로 작업한 지브리 영화 소개
+                        프로젝트입니다.
+                      </span>
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="https://qwertymi.github.io/ghibli-vuepage/"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vue-ghibli"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
                   </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
 
-                    </span>
-                    <!-- <span class="material-symbols-outlined">
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a
+                        href="http://kimhyemi.dothome.co.kr/page-miniblog/"
+                        target="_blank"
+                      >
+                        <i class="sw-pf-imgwrap imgwrap-fix">
+                          <img src="images/main10.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> TODO List </span>
+                      <span class="material-symbols-outlined">
+                        phone_iphone
+                      </span>
+                      <span class="material-symbols-outlined">
+                        desktop_windows
+                      </span>
+                      <br />
+                      <span class="pf-detailtxt">
+                        데이터베이스를 연동하여 Vue.js로 작업한 Todo list
+                        프로젝트입니다.
+                      </span>
+                      <br />
+                      <span class="pf-vuetag">Vue.js</span>
+                      <br />
+                      <a
+                        href="http://kimhyemi.dothome.co.kr/page-miniblog/"
+                        target="_blank"
+                        class="pf-a"
+                        >Work</a
+                      >
+                      <a
+                        href="https://github.com/qwertymi/vue_miniblog"
+                        target="_blank"
+                        class="pf-a vue-a"
+                        >Git</a
+                      >
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a href="#" target="_blank">
+                        <i class="sw-pf-imgwrap imgwrap-fix">
+                          <img src="images/main_ing.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> </span>
+                      <!-- <span class="material-symbols-outlined">
                       phone_iphone
                     </span>
                     <span class="material-symbols-outlined">
                       desktop_windows
                     </span> -->
-                    <br>
+                      <br />
 
-                    <!-- <a href="#" target="_blank" class="pf-a">Work</a>
+                      <!-- <a href="#" target="_blank" class="pf-a">Work</a>
                     <a href="#" target="_blank" class="pf-a">Git</a>
                     <a href="#" target="_blank" class="pf-a">Origin</a>
                     <br />
@@ -541,30 +814,28 @@
                     <br>
                     <a href="#" target="_blank" class="pf-a vue-a">Work</a>
                     <a href="#" target="_blank" class="pf-a vue-a">Git</a> -->
-                  </p>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="sw-pf-img">
-                    <a href="#" target="_blank">
-                      <i class="sw-pf-imgwrap imgwrap-fix">
-                        <img src="images/main_ing.png" alt="">
-                      </i>
-                    </a>
+                    </p>
                   </div>
-                  <p class="pf-txtbox">
-                    <span class="pf-name">
 
-                    </span>
-                    <!-- <span class="material-symbols-outlined">
+                  <div class="swiper-slide">
+                    <div class="sw-pf-img">
+                      <a href="#" target="_blank">
+                        <i class="sw-pf-imgwrap imgwrap-fix">
+                          <img src="images/main_ing.png" alt="" />
+                        </i>
+                      </a>
+                    </div>
+                    <p class="pf-txtbox">
+                      <span class="pf-name"> </span>
+                      <!-- <span class="material-symbols-outlined">
                       phone_iphone
                     </span>
                     <span class="material-symbols-outlined">
                       desktop_windows
                     </span> -->
-                    <br>
+                      <br />
 
-                    <!-- <a href="#" target="_blank" class="pf-a">Work</a>
+                      <!-- <a href="#" target="_blank" class="pf-a">Work</a>
                     <a href="#" target="_blank" class="pf-a">Git</a>
                     <a href="#" target="_blank" class="pf-a">Origin</a>
                     <br />
@@ -572,190 +843,245 @@
                     <br>
                     <a href="#" target="_blank" class="pf-a vue-a">Work</a>
                     <a href="#" target="_blank" class="pf-a vue-a">Git</a> -->
-                  </p>
+                    </p>
+                  </div>
                 </div>
-
               </div>
             </div>
 
+            <div
+              class="pf-listbox"
+              data-aos="flip-right"
+              data-aos-offset="350"
+              data-aos-duration="900"
+            >
+              <ul class="pf-list">
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list01.png" alt="풍림무약주식회사" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list_ko.png" alt="코레일" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list02.png" alt="정육각" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list04.png" alt="K-water" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list05.png" alt="노엘로힐스" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list06.png" alt="거제청년센터이룸" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list07.png" alt="마시그래이" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list08.png" alt="STX건설" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list09.png" alt="지브리api" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list10.png" alt="todolist" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list_ing.png" alt="" />
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>
+                      <img src="images/list_ing.png" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="pf-listbox" data-aos="flip-right" data-aos-offset="350" data-aos-duration="900">
-            <ul class="pf-list">
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list01.png" alt="풍림무약주식회사">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list_ko.png" alt="코레일">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list02.png" alt="정육각">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list04.png" alt="K-water">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list05.png" alt="노엘로힐스">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list06.png" alt="거제청년센터이룸">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list07.png" alt="마시그래이">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list08.png" alt="STX건설">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list09.png" alt="지브리api">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list10.png" alt="todolist">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list_ing.png" alt="">
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <img src="images/list_ing.png" alt="">
-                  </i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-
-    <section class="life" id="life">
-      <div class="inner clearfix">
-        <h2 class="life-title">ABOUT `MI`</h2>
-        <div class="life-content clearfix">
-          <div class="li-left">
-            <div class="lifebox lb-1" data-aos="zoom-in-right" data-aos-offset="500" data-aos-duration="700">
+      <section class="life" id="life">
+        <div class="inner clearfix">
+          <h2 class="life-title">ABOUT `MI`</h2>
+          <div class="life-content clearfix">
+            <div class="li-left">
+              <div
+                class="lifebox lb-1"
+                data-aos="zoom-in-right"
+                data-aos-offset="500"
+                data-aos-duration="700"
+              >
+                <span></span>
+                <p>
+                  &#10022; 전시회 관람<br />
+                  <small
+                    >다양한 전시를 보러다니면서<br />
+                    일상에 환기를 시키고, 영감을 얻고자 합니다</small
+                  >
+                </p>
+              </div>
+              <div
+                class="lifebox lb-2"
+                data-aos="zoom-in"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="500"
+              >
+                <span></span>
+                <p>
+                  &#10022; 자전거<br />
+                  <small
+                    >자전거를 타는 걸 좋아합니다<br />
+                    국토종주를 해보는 것이 버킷리스트입니다🚴🏻‍♀️</small
+                  >
+                </p>
+              </div>
+              <div
+                class="lifebox lb-3"
+                data-aos="zoom-in"
+                data-aos-offset="220"
+                data-aos-delay="300"
+                data-aos-duration="500"
+              >
+                <span></span>
+                <p>
+                  &#10022; 사진촬영<br />
+                  <small
+                    >주로 하늘과 카페 인테리어를 찍고,<br />
+                    사람들을 찍어주는 걸 좋아합니다📷</small
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="lifebox lb-4"
+              data-aos="zoom-in-down"
+              data-aos-offset="400"
+              data-aos-delay="450"
+              data-aos-duration="900"
+            >
               <span></span>
-              <p>&#10022; 전시회 관람<br>
-                <small>다양한 전시를 보러다니면서<br>
-                  일상에 환기를 시키고, 영감을 얻고자 합니다</small></p>
-            </div>
-            <div class="lifebox lb-2" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="200"
-              data-aos-duration="500"><span></span>
-              <p>&#10022; 자전거<br>
-                <small>자전거를 타는 걸 좋아합니다<br>
-                  국토종주를 해보는 것이 버킷리스트입니다🚴🏻‍♀️</small></p>
-            </div>
-            <div class="lifebox lb-3" data-aos="zoom-in" data-aos-offset="220" data-aos-delay="300"
-              data-aos-duration="500"><span></span>
-              <p>&#10022; 사진촬영<br>
-                <small>주로 하늘과 카페 인테리어를 찍고,<br>
-                  사람들을 찍어주는 걸 좋아합니다📷</small></p>
-            </div>
-          </div>
-          <div class="lifebox lb-4" data-aos="zoom-in-down" data-aos-offset="400" data-aos-delay="450"
-            data-aos-duration="900"><span></span>
-            <p>&#10022; 그림그리기<br>
-              <small>어렸을 때부터 가장 좋아한 취미이며,<br> 캐릭터 디자인 하는 것을 좋아합니다</small>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="vision" id="vision">
-      <div class="inner">
-        <div class="clearfix">
-          <h1 class="title" data-aos="">vision</h1>
-          <div class="road">
-            <span class="line"></span>
-            <div class="later-wrap">
-              <p class="later later-1"><strong>1</strong> Years later </p>
-              <p class="later later-3"><strong>3</strong> Years later </p>
-              <p class="later later-5"><strong> 5</strong> Years later </p>
-            </div>
-          </div>
-          <div class="vision-bottom">
-            <div class="vision-box delay-0">
-              퍼블리싱 능력과 FE지식을 다지고 심화시키며, 모르는 것은 검색하되 단순 카피만 하는 것이 아닌,
-              이해하고 응용하며 온전히 나의 것으로 만들 수 있는 개발자가 될 것입니다.
-            </div>
-            <div class="vision-box delay-1">
-              실무 경험을 통해 프로젝트 흐름을 완벽히 이해하고, 디자이너 및 BE 개발자와 원활한 소통을 하며
-              기초 지식으로부터 오는 견고함과 초심을 잃지 않는 개발자가 될 것입니다.
-            </div>
-            <div class="vision-box delay-2">
-              꾸준히 업그레이드되는 프레임워크의 트렌드를 놓치지 않으며, 현재의 지식과 경험에 안주하지 않고
-              늘 배움의 자세로, 계속해서 업그레이드되는 개발자가 될 것입니다.
+              <p>
+                &#10022; 그림그리기<br />
+                <small
+                  >어렸을 때부터 가장 좋아한 취미이며,<br />
+                  캐릭터 디자인 하는 것을 좋아합니다</small
+                >
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <div class="inner">
-
-
-        <span class="contact-title">CONTACT `MI`</span>
-        <ul class="contact-list clearfix">
-          <li><a href="mailto:kimhp1216@naver.com"><i class="fas fa-envelope"></i></a></li>
-          <li><a href="https://open.kakao.com/o/suXT9MCe" target="_blank"><i class="fas fa-comments"></i></a></li>
-          <li><a href="images/Qwertymi포트폴리오.pdf" download="김혜미_포트폴리오"><i class="fas fa-file-download"></i></a></li>
-        </ul>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="inner">
-        <span class="copy">Copyright 2022. KIMHYEMI All rights reserved.</span>
-      </div>
-    </footer>
-  </div>
-</body>
-
+      <section class="vision" id="vision">
+        <div class="inner">
+          <div class="clearfix">
+            <h1 class="title" data-aos="">vision</h1>
+            <div class="road">
+              <span class="line"></span>
+              <div class="later-wrap">
+                <p class="later later-1"><strong>1</strong> Years later</p>
+                <p class="later later-3"><strong>3</strong> Years later</p>
+                <p class="later later-5"><strong> 5</strong> Years later</p>
+              </div>
+            </div>
+            <div class="vision-bottom">
+              <div class="vision-box delay-0">
+                퍼블리싱 능력과 FE지식을 다지고 심화시키며, 모르는 것은 검색하되
+                단순 카피만 하는 것이 아닌, 이해하고 응용하며 온전히 나의 것으로
+                만들 수 있는 개발자가 될 것입니다.
+              </div>
+              <div class="vision-box delay-1">
+                실무 경험을 통해 프로젝트 흐름을 완벽히 이해하고, 디자이너 및 BE
+                개발자와 원활한 소통을 하며 기초 지식으로부터 오는 견고함과
+                초심을 잃지 않는 개발자가 될 것입니다.
+              </div>
+              <div class="vision-box delay-2">
+                꾸준히 업그레이드되는 프레임워크의 트렌드를 놓치지 않으며,
+                현재의 지식과 경험에 안주하지 않고 늘 배움의 자세로, 계속해서
+                업그레이드되는 개발자가 될 것입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="inner">
+          <span class="contact-title">CONTACT `MI`</span>
+          <ul class="contact-list clearfix">
+            <li>
+              <a href="mailto:kimhp1216@naver.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://open.kakao.com/o/suXT9MCe" target="_blank"
+                ><i class="fas fa-comments"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="images/Qwertymi포트폴리오.pdf"
+                download="김혜미_포트폴리오"
+                ><i class="fas fa-file-download"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="inner">
+          <span class="copy"
+            >Copyright 2022. KIMHYEMI All rights reserved.</span
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
