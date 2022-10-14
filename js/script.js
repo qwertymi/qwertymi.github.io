@@ -118,8 +118,10 @@ window.onload = function () {
     handler: function (direction) {
       if (direction == "down") {
         $(".polygon-color").addClass("polygon-color-draw");
+        $(".polygon-color").removeClass("polygon-color-remove");
       } else if (direction == "up") {
-        $(".polygon-color").addClass("polygon-color-draw");
+        $(".polygon-color").removeClass("polygon-color-draw");
+        $(".polygon-color").addClass("polygon-color-remove");
       }
     },
     offset: "70%",
@@ -130,21 +132,21 @@ window.onload = function () {
   function makeCircle(_id, _str, _startColor, _endColor) {
     let bar = new ProgressBar.Circle(_id, {
       color: "#777",
-      strokeWidth: 50,
-      trailWidth: 50,
+      strokeWidth: 5,
+      trailWidth: 0,
       easing: "easeOut",
-      duration: 1400,
+      duration: 1300,
 
       text: {
         autoStyleContainer: false,
       },
       from: {
         color: _startColor,
-        width: 50,
+        width: 5,
       },
       to: {
         color: _endColor,
-        width: 50,
+        width: 5,
       },
       step: function (state, circle) {
         circle.path.setAttribute("stroke", state.color);
@@ -159,28 +161,28 @@ window.onload = function () {
       },
     });
     bar.text.style.fontFamily = "LeferiBase";
-    bar.text.style.fontSize = "24px";
+    bar.text.style.fontSize = "15px";
     bar.text.style.color = "#333";
     return bar;
   }
 
-  let bar_html = makeCircle(html, "HTML", "#e73c7e", "#C9D1FF");
-  let bar_js = makeCircle(js, "JS", "#e73c7e", "#C9D1FF");
-  let bar_css = makeCircle(css, "CSS", "#e73c7e", "#C9D1FF");
-  let bar_jquery = makeCircle(jquery, "JQuery", "#e73c7e", "#C9D1FF");
-  let bar_scss = makeCircle(scss, "SCSS", "#e73c7e", "#C9D1FF");
-  let bar_vue = makeCircle(vue, "Vue.js", "#e73c7e", "#C9D1FF");
-  let bar_figma = makeCircle(figma, "Figma", "#e73c7e", "#C9D1FF");
-  let bar_github = makeCircle(github, "Github", "#e73c7e", "#C9D1FF");
-  let bar_photoshop = makeCircle(photoshop, "Phtoshop", "#e73c7e", "#C9D1FF");
+  let bar_html = makeCircle(html, "HTML", "#ffffff", "#f9a35b");
+  let bar_js = makeCircle(js, "JS", "#ffffff", "#fce55b");
+  let bar_css = makeCircle(css, "CSS", "#ffffff", "#84bcf9");
+  let bar_jquery = makeCircle(jquery, "JQuery", "#ffffff", "#c8c8c8");
+  let bar_scss = makeCircle(scss, "SCSS", "#ffffff", "#f999cd");
+  let bar_vue = makeCircle(vue, "Vue.js", "#ffffff", "#8de9b1");
+  let bar_figma = makeCircle(figma, "Figma", "#ffffff", "#a9f6ff");
+  let bar_github = makeCircle(github, "Github", "#ffffff", "#707070");
+  let bar_photoshop = makeCircle(photoshop, "Phtoshop", "#ffffff", "#8cc8ff");
   let bar_illustrator = makeCircle(
     illustrator,
     "Illustrator",
-    "#e73c7e",
-    "#C9D1FF"
+    "#ffffff",
+    "#fabd5b"
   );
-  let bar_afec = makeCircle(afec, "After Effect", "#e73c7e", "#C9D1FF");
-  let bar_premiere = makeCircle(premiere, "Premiere", "#e73c7e", "#C9D1FF");
+  let bar_afec = makeCircle(afec, "AfterEffect", "#ffffff", "#cca6f8");
+  let bar_premiere = makeCircle(premiere, "Premiere", "#ffffff", "#ea9bff");
 
   let barAni = () => {
     bar_html.animate(0.95);
@@ -320,6 +322,13 @@ window.onload = function () {
 
   let wW = window.innerWidth;
   let pfListbox = $(".pf-listbox");
+  let vision_title = $(".vision .title");
+
+  if (wW <= 760) {
+    vision_title.attr("data-aos", "none");
+  } else {
+    vision_title.attr("data-aos", "flip-left");
+  }
   if (wW <= 650) {
     pfListbox.attr("data-aos-offset", 0);
   } else {
@@ -330,8 +339,15 @@ window.onload = function () {
     wW = window.innerWidth;
     if (wW <= 650) {
       pfListbox.attr("data-aos-offset", 0);
+      vision_title.attr("data-aos", "none");
     } else {
       pfListbox.attr("data-aos-offset", 350);
+      vision_title.attr("data-aos", "flip-left");
+    }
+    if (wW <= 760) {
+      vision_title.attr("data-aos", "none");
+    } else {
+      vision_title.attr("data-aos", "flip-left");
     }
   });
 };
