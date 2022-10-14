@@ -2377,7 +2377,9 @@ body::-webkit-scrollbar-track {
   color: #fff;
   transition: all 0.2s;
 }
-
+.contact-git a i {
+  font-size: 23px;
+}
 .contact-list li a:hover i {
   color: #000;
 }
